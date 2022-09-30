@@ -3,7 +3,7 @@ function getElement(id) {
 }
 
 function signIn() {
-  var user = getElement("user").value.toString();
+  var login = getElement("user").value.toString();
   var password = getElement("password").value.toString();
-  window.location.href("Controllers/Pessoa/GetPessoa.php?usuario=" + user + "&senha=" + password);
+  window.location.href("Controllers/Login/Login.php?login=" + login + "&senha=" + password);
 }
