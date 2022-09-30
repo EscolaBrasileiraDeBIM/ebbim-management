@@ -3,7 +3,15 @@ function getElement(id) {
 }
 
 function signIn() {
-  var login = getElement("user").value.toString();
+  var user = getElement("user").value.toString();
   var password = getElement("password").value.toString();
-  window.location.href("Controllers/Login/Login.php?login=" + login + "&senha=" + password);
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "Controllers/Login/Login.php", true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+      login: user,
+      senha: password
+  }));
+
+  //window.location.href("Controllers/Login/Login.php?login=" + login + "&senha=" + password);
 }
