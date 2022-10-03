@@ -19,5 +19,5 @@ function signIn() {
       senha: password
   }));
 
-  //window.location.href("Controllers/Login/Login.php?login=" + login + "&senha=" + password);
+  window.location.href("https://sistema.ebbim.com.br/ebbim-api/Controllers/Login/Login.php");
 }
