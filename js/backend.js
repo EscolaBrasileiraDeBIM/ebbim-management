@@ -20,4 +20,5 @@ function signIn() {
   })); */
 
   window.location.href("../../ebbim-api/Controllers/Login/Login.php");
+  alert("Pare!");
 }
