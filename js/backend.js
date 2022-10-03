@@ -3,6 +3,7 @@ function getElement(id) {
 }
 
 function signIn() {
+  alert('Teste');
   var user = getElement("user").value.toString();
   var password = getElement("password").value.toString();
   var xhr = new XMLHttpRequest();
