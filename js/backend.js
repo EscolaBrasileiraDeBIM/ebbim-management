@@ -19,6 +19,7 @@ function signIn() {
       senha: password
   })); */
 
-  window.location.href("../../ebbim-api/Controllers/Login/Login.php");
   alert("Pare!");
+  window.location.href("../../ebbim-api/Controllers/Login/Login.php");
+  alert("Pare2!");
 }
