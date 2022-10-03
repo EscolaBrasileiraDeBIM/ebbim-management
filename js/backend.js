@@ -19,7 +19,5 @@ function signIn() {
       senha: password
   })); */
 
-  alert("Pare!");
-  window.location.href("../../ebbim-api/Controllers/Login/Login.php");
-  alert("Pare2!");
+  window.location.assign("/ebbim-api/Controllers/Login/Login.php");
 }
