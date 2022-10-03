@@ -6,7 +6,7 @@ function signIn() {
   var user = getElement("user").value.toString();
   var password = getElement("password").value.toString();
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "Controllers/Login/Login.php", true);
+  xhr.open("POST", "https://sistema.ebbim.com.br/ebbim-api/Controllers/Login/Login.php", true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
       login: user,
