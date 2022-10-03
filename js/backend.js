@@ -3,6 +3,7 @@ function getElement(id) {
 }
 
 function signIn() {
+  window.location.assign("/ebbim-api/Controllers/Login/Login.php");
   /* var user = getElement("user").value.toString();
   var password = getElement("password").value.toString();
   var xhr = new XMLHttpRequest();
@@ -18,6 +19,4 @@ function signIn() {
       login: user,
       senha: password
   })); */
-
-  window.location.assign("/ebbim-api/Controllers/Login/Login.php");
 }
