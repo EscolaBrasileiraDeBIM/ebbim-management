@@ -3,7 +3,6 @@ function getElement(id) {
 }
 
 function signIn() {
-  alert('Teste');
   var user = getElement("user").value.toString();
   var password = getElement("password").value.toString();
   var xhr = new XMLHttpRequest();
@@ -13,6 +12,9 @@ function signIn() {
       login: user,
       senha: password
   }));
+  xhr.onload = function () {
+    console.log("teste");
+};
 
   //window.location.href("Controllers/Login/Login.php?login=" + login + "&senha=" + password);
 }
