@@ -10,8 +10,8 @@ function signIn() {
         console.log(res);
     }
 };
-  xhr.send({
+  xhr.send(JSON.stringify({
       login: user,
       senha: password
-  });
+  }));
 }
