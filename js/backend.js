@@ -7,7 +7,7 @@ function signIn() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var res = JSON.parse(xhr.response);
-        console.log(res);
+        alert(res);
     }
 };
   xhr.send(JSON.stringify({
