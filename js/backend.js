@@ -11,7 +11,7 @@ function signIn() {
     }
 };
   xhr.send(JSON.stringify({
-      login: user,
-      senha: password
+      "login": user,
+      "senha": password
   }));
 }
