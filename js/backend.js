@@ -4,6 +4,8 @@ function signIn() {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "https://sistema.ebbim.com.br/ebbim-api/Controllers/Login/Login.php", true);
   xhr.setRequestHeader('Content-Type', 'application/json');
-  data = JSON.parse('{"login":"' + user +'", "senha":"' + password +'"}');
-  xhr.send(data);
+  xhr.send(JSON.stringify({
+      "login": user,
+      "senha": password
+  }));
 }
