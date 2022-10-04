@@ -5,11 +5,11 @@ function signIn() {
   xhr.open("POST", "https://sistema.ebbim.com.br/ebbim-api/Controllers/Login/Login.php", true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onreadystatechange = function () {
-    if (request.readyState == "4") //Request finished and response is ready
+    if (xhr.readyState == "4") //Request finished and response is ready
     {
-        if (request.status == "200") {
+        if (xhr.status == "200") {
             alert("Success");
-            document.write(request.responseText);
+            document.write(xhr.responseText);
         }
         else {
             alert("Problem retrieving data");
