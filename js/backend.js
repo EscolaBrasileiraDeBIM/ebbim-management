@@ -5,7 +5,7 @@ function signIn() {
   xhr.open("POST", "https://sistema.ebbim.com.br/ebbim-api/Controllers/Login/Login.php", true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
-      "login": user,
-      "senha": password
+      "login": "gabriel.val",
+      "senha": "teste"
   }));
 }
