@@ -86,7 +86,7 @@
               <h4 class="mb-2">Seja bem vindo ao EBBIM! 👋</h4>
               <p class="mb-4">Faça login para entrar</p>
 
-              <!--<form id="formAuthentication" class="mb-3" method="POST">-->
+              <form id="formAuthentication" class="mb-3" method="POST" onsubmit="signIn()">
                 <div class="mb-3">
                   <label for="user" class="form-label">Usuário</label>
                   <input
@@ -124,9 +124,9 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" onclick="signIn()">Entrar</button>
+                  <button class="btn btn-primary d-grid w-100" type="submit">Entrar</button>
                 </div>
-              <!--</form>-->
+              </form>
               </p>
             </div>
           </div>
