@@ -1,7 +1,3 @@
-function getElement(id) {
-  return document.getElementById(id);
-}
-
 function signIn() {
   alert(user + " " + password);
   var user = getElement("user").value.toString();
