@@ -8,13 +8,14 @@ function signIn() {
     'senha': password
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
-  }).then((response) => realizado = response.ok);
-  if (realizado)
-  {
-    alert("Login realizado com sucesso")
-  }
-  else
-  {
-    alert("Usuário ou senha incorretos, tente novamente")
+  }).then((response) => {
+    if (response.ok)
+    {
+      alert("Login realizado com sucesso")
+    }
+    else
+    {
+      alert("Usuário ou senha incorretos, tente novamente")
+    }
   }
 }
