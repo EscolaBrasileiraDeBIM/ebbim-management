@@ -3,10 +3,10 @@ function signIn() {
   var password = document.getElementById("password").value.toString();
   fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Login/Login.php', {
   method: "POST",
-  body: JSON.stringify({
-    login: user,
-    senha: password
+  body: new URLSearchParams({
+    'login': 'gabriel.val',
+    'senha': 'teste'
   }),
-  headers: {"Content-type": "application/json; charset=UTF-8"}
+  headers: {"Content-type": "application/application/x-www-form-urlencoded"}
   })
 }
