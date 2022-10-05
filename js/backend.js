@@ -12,10 +12,11 @@ function signIn() {
     if (response.ok)
     {
       response.json().then(function(data) {
-        alert(data.apelido);
+        localStorage.setItem('id', data.id)
+        localStorage.setItem('nome', data.nome)
+        localStorage.setItem('apelido', data.apelido)
+        window.location.assign("https://sistema.ebbim.com.br/html/index.html")
       });
-      // localStorage.setItem('id', response.body)
-      // window.location.assign("https://sistema.ebbim.com.br/html/index.html")
     }
     else
     {
