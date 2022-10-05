@@ -11,7 +11,7 @@ function signIn() {
   }).then((response) => {
     if (response.ok)
     {
-      alert("Login realizado com sucesso")
+      window.location.assign("https://sistema.ebbim.com.br/html/index.html")
     }
     else
     {
