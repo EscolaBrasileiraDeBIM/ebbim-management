@@ -11,7 +11,9 @@ function signIn() {
   }).then((response) => {
     if (response.ok)
     {
-      window.location.assign("https://sistema.ebbim.com.br/html/index.html")
+      alert(response.body.toString())
+      // localStorage.setItem('id', response.body)
+      // window.location.assign("https://sistema.ebbim.com.br/html/index.html")
     }
     else
     {
