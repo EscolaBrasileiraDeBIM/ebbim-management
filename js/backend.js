@@ -11,7 +11,7 @@ function signIn() {
   }).then((response) => {
     if (response.ok)
     {
-      alert(response.body.getReader())
+      alert(response.json)
       // localStorage.setItem('id', response.body)
       // window.location.assign("https://sistema.ebbim.com.br/html/index.html")
     }
