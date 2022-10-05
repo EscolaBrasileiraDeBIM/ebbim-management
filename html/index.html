@@ -63,9 +63,12 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+
+     <!-- Backend -->
+     <script src="../js/backend.js"></script>
   </head>
 
-  <body>
+  <body onload="getData()">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -524,7 +527,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span id="usernameSpan" class="fw-semibold d-block"></span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>

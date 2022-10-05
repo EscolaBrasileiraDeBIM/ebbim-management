@@ -24,3 +24,7 @@ function signIn() {
     }
   })
 }
+
+function getData() {
+  document.getElementById("usernameSpan").innerText = localStorage.getItem('nome');
+}
