@@ -10,7 +10,7 @@ function signIn() {
   headers: {"Content-type": "application/x-www-form-urlencoded"}
   }).then(function(response) {
     response.json().then(function(data) {
-      console.log(data);
+      console.log(data.apelido);
     });
   })
 }
