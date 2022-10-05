@@ -8,16 +8,9 @@ function signIn() {
     'senha': password
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
-  }).then((response) => {
-    if (response.ok)
-    {
-      alert(response.body.text())
-      // localStorage.setItem('id', response.body)
-      // window.location.assign("https://sistema.ebbim.com.br/html/index.html")
-    }
-    else
-    {
-      alert("Usuário ou senha incorretos, tente novamente")
-    }
+  }).then(function(response) {
+    response.json().then(function(data) {
+      console.log(data);
+    });
   })
 }
