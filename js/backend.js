@@ -7,6 +7,6 @@ function signIn() {
     'login': 'gabriel.val',
     'senha': 'teste'
   }),
-  headers: {"Content-type": "application/application/x-www-form-urlencoded"}
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
   })
 }
