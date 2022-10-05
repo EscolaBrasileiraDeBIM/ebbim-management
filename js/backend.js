@@ -8,8 +8,8 @@ function signIn() {
     'senha': password
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
-  }).then((response) => resultado = response.status);
-  if (resultado == 201)
+  }).then((response) => realizado = response.ok);
+  if (realizado)
   {
     alert("Login realizado com sucesso")
   }
