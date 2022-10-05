@@ -17,5 +17,5 @@ function signIn() {
     {
       alert("Usuário ou senha incorretos, tente novamente")
     }
-  }
+  })
 }
