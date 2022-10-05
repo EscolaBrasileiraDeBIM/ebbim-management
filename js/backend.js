@@ -8,5 +8,5 @@ function signIn() {
     'senha': 'teste'
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
-  })
+  }).then((response) => alert(response.json()))
 }
