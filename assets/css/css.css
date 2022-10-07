@@ -1,0 +1,4 @@
+.alert-full {
+    position: absolute;
+    width: -webkit-fill-available;
+}
