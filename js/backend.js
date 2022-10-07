@@ -30,5 +30,5 @@ function getData() {
 }
 
 function btnAlertClose() {
-  document.getElementById("btn-close-error-login").style.display="none";
+  document.getElementById("alert-error-login").style.display="none";
 }
