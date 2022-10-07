@@ -20,7 +20,7 @@ function signIn() {
     }
     else
     {
-      alert("Usuário ou senha incorretos, tente novamente")
+      document.getElementById("alert-error-login").style.display="block";
     }
   })
 }
