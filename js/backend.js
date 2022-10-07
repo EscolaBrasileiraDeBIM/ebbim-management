@@ -28,3 +28,7 @@ function signIn() {
 function getData() {
   document.getElementById("usernameSpan").innerText = localStorage.getItem('nome');
 }
+
+function btnAlertClose() {
+  document.getElementById("btn-close-error-login").style.display="none";
+}
