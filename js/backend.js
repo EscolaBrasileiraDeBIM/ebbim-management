@@ -20,11 +20,15 @@ function signIn() {
     }
     else
     {
-      alert("Usuário ou senha incorretos, tente novamente")
+      document.getElementById("alert-error-login").style.display="block";
     }
   })
 }
 
 function getData() {
   document.getElementById("usernameSpan").innerText = localStorage.getItem('nome');
+}
+
+function btnAlertClose() {
+  document.getElementById("alert-error-login").style.display="none";
 }

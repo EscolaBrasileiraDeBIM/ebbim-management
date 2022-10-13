@@ -1,0 +1,6 @@
+.alert-full {
+    position: absolute;
+    width: -webkit-fill-available;
+    text-align: center;
+    display: none;
+}
