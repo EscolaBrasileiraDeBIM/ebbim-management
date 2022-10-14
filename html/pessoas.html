@@ -449,111 +449,6 @@
 
         <!-- Layout container -->
         <div class="layout-page">
-          <!-- Navbar -->
-
-          <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar"
-          >
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="bx bx-menu bx-sm"></i>
-              </a>
-            </div>
-
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search fs-4 lh-0"></i>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
-                  />
-                </div>
-              </div>
-              <!-- /Search -->
-
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Place this tag where you want the button to render. -->
-                <li class="nav-item lh-1 me-3">
-                  <a
-                    class="github-button"
-                    href="https://github.com/themeselection/sneat-html-admin-template-free"
-                    data-icon="octicon-star"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-                    >Star</a
-                  >
-                </li>
-
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span id="usernameSpan" class="fw-semibold d-block"></span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-              </ul>
-            </div>
-          </nav>
-
-          <!-- / Navbar -->
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
@@ -611,8 +506,91 @@
                             placeholder="123.456.789-10"
                             aria-describedby="floatingInputHelp"
                           />
-                          <label for="cpfcnpj">Documento</label>
+                          <label for="inputCpfcnpj">Documento</label>
                         </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputRg"
+                            placeholder="12.345.678-9"
+                            aria-describedby="floatingInputHelp"
+                          />
+                          <label for="inputRg">RG</label>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputEmpresa"
+                            placeholder="12.345.678-9"
+                            aria-describedby="floatingInputHelp"
+                          />
+                          <label for="inputEmpresa">Empresa</label>
+                        </div>
+                      </div>
+                      <div class="col-md mb-3">
+                        <label class="col-md-4 col-form-label">Gênero</label>
+                        <div class="form-check form-check-inline mt-3">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMasculino" value="option1" />
+                          <label class="form-check-label" for="inputMasculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputFeminino" value="option2" />
+                          <label class="form-check-label" for="inputFeminino">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputOutros" value="option3" />
+                          <label class="form-check-label" for="inputOutros">Outros</label>
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="inputDataNascimento" class="col-md-4 col-form-label">Data de nascimento</label>
+                        <div class="col-md">
+                          <input class="form-control" type="date" id="inputDataNascimento" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="inputFornecedor" class="col-md-4 col-form-label">Fornecedor</label>
+                        <div class="col-md">
+                          <select class="form-select" id="inputFornecedor">
+                            <option selected></option>
+                            <option value="Água">Água</option>
+                            <option value="Alimentos">Alimentos</option>
+                            <option value="Ar-Condicionado">Ar-Condicionado</option>
+                            <option value="Banco">Banco</option>
+                            <option value="Brindes/Mousepad">Brindes/Mousepad</option>
+                            <option value="Contabilidade">Contabilidade</option>
+                            <option value="Correios">Correios</option>
+                            <option value="Embalagem/Descartaveis">Embalagem/Descartaveis</option>
+                            <option value="Empresa cartão crédito">Empresa cartão crédito</option>
+                            <option value="Farmácia">Farmácia</option>
+                            <option value="Faxina">Faxina</option>
+                            <option value="Gráfica/Copiadora">Gráfica/Copiadora</option>
+                            <option value="Impressora (tinta e manutenção)">Impressora (tinta e manutenção)</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Livraria/Distribuidora">Livraria/Distribuidora</option>
+                            <option value="Manutenção computadores">Manutenção computadores</option>
+                            <option value="Manutenção espaço">Manutenção espaço</option>
+                            <option value="Motoboy">Motoboy</option>
+                            <option value="Papelaria">Papelaria</option>
+                            <option value="Possível colaborador">Possível colaborador</option>
+                            <option value="Produtos de limpeza">Produtos de limpeza</option>
+                            <option value="Relógio de ponto">Relógio de ponto</option>
+                            <option value="Revendedor Software">Revendedor Software</option>
+                            <option value="Revisor de texto">Revisor de texto</option>
+                            <option value="Telefonia">Telefonia</option>
+                            <option value="Transportadora">Transportadora</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <label for="inputComentario" class="form-label">Comentário</label>
+                        <textarea class="form-control" id="inputComentario" rows="1"></textarea>
                       </div>
                     </div>
                   </div>
