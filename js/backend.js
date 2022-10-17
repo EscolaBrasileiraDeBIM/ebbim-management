@@ -36,10 +36,10 @@ function btnAlertClose() {
 function changePJ() {
   if (document.getElementById("inputPJ").checked)
   {
-    console.log("Check");
+    alert("Check");
   }
   else
   {
-    console.log("UnCheck");
+    alert("UnCheck");
   }
 }
