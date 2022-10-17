@@ -36,12 +36,14 @@ function btnAlertClose() {
 function changePJ() {
   if (document.getElementById("inputPJ").checked)
   {
+    document.getElementById("divApelido").style.display="none";
     document.getElementById("divRg").style.display="none";
     document.getElementById("divGenero").style.display="none";
     document.getElementById("divDataNascimento").style.display="none";
   }
   else
   {
+    document.getElementById("divApelido").style.display="block";
     document.getElementById("divRg").style.display="block";
     document.getElementById("divGenero").style.display="block";
     document.getElementById("divDataNascimento").style.display="block";
