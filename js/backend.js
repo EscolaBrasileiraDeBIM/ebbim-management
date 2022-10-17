@@ -36,10 +36,10 @@ function btnAlertClose() {
 function changePJ() {
   if (document.getElementById("inputPJ").checked)
   {
-    document.getElementById("inputRg").style.display="none";
+    document.getElementById("divRg").style.display="none";
   }
   else
   {
-    document.getElementById("inputRg").style.display="block";
+    document.getElementById("divRg").style.display="block";
   }
 }
