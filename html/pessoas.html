@@ -463,11 +463,11 @@
                         <div class="form-check form-switch mb-2">
                           <div class="row">
                             <div class="col-md-6">
-                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <input class="form-check-input" type="checkbox" id="inputPJ" onchange="changePJ">
                               <label class="form-check-label" for="flexSwitchCheckDefault">Pessoa jurídica</label>
                             </div>
                             <div class="col-md-6">
-                              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                              <input class="form-check-input" type="checkbox" id="inputEstrangeiro">
                               <label class="form-check-label" for="flexSwitchCheckDefault">Estrangeiro</label>
                             </div>
                           </div>
@@ -502,6 +502,18 @@
                           <input
                             type="text"
                             class="form-control"
+                            id="inputEmpresa"
+                            placeholder="Microsoft"
+                            aria-describedby="floatingInputHelp"
+                          />
+                          <label for="inputEmpresa">Empresa</label>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
                             id="inputCpfcnpj"
                             placeholder="123.456.789-10"
                             aria-describedby="floatingInputHelp"
@@ -519,18 +531,6 @@
                             aria-describedby="floatingInputHelp"
                           />
                           <label for="inputRg">RG</label>
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="inputEmpresa"
-                            placeholder="Microsoft"
-                            aria-describedby="floatingInputHelp"
-                          />
-                          <label for="inputEmpresa">Empresa</label>
                         </div>
                       </div>
                       <div class="col-md mb-3">

@@ -25,10 +25,21 @@ function signIn() {
   })
 }
 
-function getData() {
-  document.getElementById("usernameSpan").innerText = localStorage.getItem('nome');
-}
-
 function btnAlertClose() {
   document.getElementById("alert-error-login").style.display="none";
+}
+
+/* function getData() {
+  document.getElementById("usernameSpan").innerText = localStorage.getItem('nome');
+} */
+
+function changePJ() {
+  if (document.getElementById("inputPJ").checked)
+  {
+    console.log("Check");
+  }
+  else
+  {
+    console.log("UnCheck");
+  }
 }
