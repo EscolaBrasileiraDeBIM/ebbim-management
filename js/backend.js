@@ -40,6 +40,10 @@ function changePJ() {
     document.getElementById("divRg").style.display="none";
     document.getElementById("divGenero").style.display="none";
     document.getElementById("divDataNascimento").style.display="none";
+
+    document.getElementById("divRazaoSocial").style.display="block";
+    document.getElementById("divIm").style.display="block";
+    document.getElementById("divIe").style.display="block";
   }
   else
   {
@@ -47,5 +51,9 @@ function changePJ() {
     document.getElementById("divRg").style.display="block";
     document.getElementById("divGenero").style.display="block";
     document.getElementById("divDataNascimento").style.display="block";
+
+    document.getElementById("divRazaoSocial").style.display="none";
+    document.getElementById("divIm").style.display="none";
+    document.getElementById("divIe").style.display="none";
   }
 }
