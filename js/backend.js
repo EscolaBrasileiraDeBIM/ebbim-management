@@ -60,10 +60,10 @@ function changePJ() {
 
 function addPessoa() {
   var nome = document.getElementById("inputNome").value.toString();
-  var pf;
-  if (!document.getElementById("inputPJ").checked)
+  var pf = 1;
+  if (document.getElementById("inputPJ").checked)
   {
-    pf = 1;
+    pf = null;
   }
   var genero = "";
   if (document.getElementById("inputMasculino").checked)
