@@ -57,3 +57,25 @@ function changePJ() {
     document.getElementById("divIe").style.display="none";
   }
 }
+
+function addPessoa() {
+  var nome = document.getElementById("inputNome").value.toString();
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/Inserir.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'nome': nome
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+      response.json().then(function(data) {
+        alert("Adicionado");
+      });
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
