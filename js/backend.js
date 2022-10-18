@@ -60,10 +60,30 @@ function changePJ() {
 
 function addPessoa() {
   var nome = document.getElementById("inputNome").value.toString();
+  var pf;
+  if (!document.getElementById("inputPJ").checked)
+  {
+    pf = 1;
+  }
+  var genero = "";
+  if (document.getElementById("inputMasculino").checked)
+  {
+    genero = "Masculino";
+  }
+  else if (document.getElementById("inputFeminino").checked)
+  {
+    genero = "Feminino";
+  }
+  else if (document.getElementById("inputOutros").checked)
+  {
+    genero = "Outros";
+  }
   fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/Inserir.php', {
   method: "POST",
   body: new URLSearchParams({
-    'nome': nome
+    'nome': nome,
+    'pf': pf,
+    'genero': genero
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
   }).then((response) => {
