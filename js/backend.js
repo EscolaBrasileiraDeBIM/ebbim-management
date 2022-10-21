@@ -83,7 +83,6 @@ function addPessoa() {
   body: new URLSearchParams({
     'nome': nome,
     'pf': pf,
-    'genero': genero
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
   }).then((response) => {
