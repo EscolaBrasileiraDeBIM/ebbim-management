@@ -556,50 +556,739 @@
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
-
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span></h4>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Cursos TI Lab</span> Curso BIM e Cidadania</h4>
 
-              <!-- Collapse -->
-              <h5></h5>
               <div class="row">
-                <div class="col-12">
+                <div class="col-md-6">
                   <div class="card mb-4">
-                    <h5 class="card-header">Basic</h5>
+                    <h5 class="card-header"></h5>
                     <div class="card-body">
-                      <p class="card-text">
-                        Toggle the visibility of content across your project with a few classes and our JavaScript
-                        plugins.
-                      </p>
-                      <p class="demo-inline-spacing">
-                        <a
-                          class="btn btn-primary me-1"
+					<img class="card-img-top" src="../assets/img/elements/bcd-thumb.jpeg" alt="" style="width:300px;height:300px;"/></img><p>
+                      <div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="defaultFormControlInput"
+                          placeholder="Nome do curso"
+						  value="Curso BIM e Cidadania"
+                        />
+                      </div>
+					  <p>
+					    <div>
+                        <select id="smallSelect" class="form-select form-select-sm" value="Ativo">
+                          <option>Ativo</option>
+                          <option value="1">Desativado</option>
+                        </select>
+                      </div>
+					  <p>
+					  <div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="defaultFormControlInput"
+                          placeholder="Sigla do curso"
+						  value="PT-CR-04-BCD-A-21"
+                        />
+                      </div>
+					  <p>
+						<div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="Curso BIM e Cidadania"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Apelido</label>
+						<p>
+						<div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="defaultFormControlInput"
+                          placeholder="Link"
+						  value="https://www.tilab.com.br/produto/curso-bim-cidadania/"
+                        />
+                      </div>
+                      <p>
+					  <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="16381"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">ID do Curso</label></div>
+                    </div>
+					</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <div class="card-body">
+					  <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="PT"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Idioma</label></div>
+						<p>
+						<div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="CR"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Tipo de Produto</label></div>
+						<p>
+						<div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="4"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Tipo de Contrato</label></div>
+						<p>
+						<div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="BCD"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Produto</label></div>
+						<p>
+						<div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="A"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Versão</label></div>
+						<p>
+						<div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingInput"
+                          placeholder=""
+						  value="21"
+                          aria-describedby="floatingInputHelp"
+                        />
+                        <label for="floatingInput">Horas aula</label></div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="accordion mt-3" id="accordionExample">
+                    <div class="card accordion-item active">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button
+                          type="button"
+                          class="accordion-button"
                           data-bs-toggle="collapse"
-                          href="#collapseExample"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="collapseExample"
+                          data-bs-target="#accordionOne"
+                          aria-expanded="true"
+                          aria-controls="accordionOne"
                         >
                           Descrição
-                        </a>
-                      </p>
-                      <div class="collapse" id="collapseExample">
-                        <div class="d-grid d-sm-flex p-3 border">
-                          <span>
-                            O objetivo do curso Fundamentos do IFC é apresentar aos alunos:
-<br>
-– O que é o esquema de dados/formato de arquivos IFC (Industry Foundation Classes) e como foi criado<br>
-– Porquê ele é o formato padrão para intercâmbio de informações entre os diversos parceiros que atuam na concepção, projeto, acompanhamento, execução e manutenção de obras<br>
-– Como é a estrutura de um modelo de projetos exportada para IFC<br>
-– De que maneiras é possível importar e exportar dados em IFC<br>
-– Quais tipos de análises podem ser realizadas em arquivos IFC e quais as suas aplicações<br>
-– Métodos e ferramentas para realizar a análise de dados de arquivos IFC para auditar projetos segundo a metodologia apresentada no curso Coordenação e compatibilização de projetos em BIM<br>
-– Como dar encaminhamento à adoção dos métodos e ferramentas de análise de modelos<br>
-<br>
-Serão utilizados exercícios (com e sem uso de softwares) que vão explicitar quais os principais gargalos enfrentados pelas equipes de projeto e obra no que diz respeito à comunicação e manutenção da integridade de dados, e qual a importância do IFC como suporte tecnológico desse tipo de interação, tornando o trânsito de informações mais fluido e consistente entre parceiros.<br>
-Ao fim do treinamento, o participante terá mais conhecimento sobre como o IFC funciona, do ponto de vista teórico e prático, e terá mais conhecimento a respeito de como utilizar arquivos neste formato de modo seguro e confiável.<br>
-                          </span>
+                        </button>
+                      </h2>
+
+                      <div
+                        id="accordionOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10">O curso tem o propósito de apresentar e debater de que forma o exercício da cidadania se relaciona com os processos de trabalho baseados em Building Information Modeling (BIM). Para este curso, “cidadania” significa o “a tomada de consciência, por parte do cidadão, de seus direitos, tendo como contrapartida a realização dos deveres. Isso implica no efetivo exercício dos direitos civis, políticos e sócio-econômicos, bem como na participação e contribuição para o bem-estar da sociedade”. (CODIC, 2015)
+
+Como é de conhecimento de quem trabalha no setor da construção civil, em 2018 o Governo do Brasil instituiu a “Estratégia Nacional de Disseminação do Building Information Modelling no Brasil – Estratégia BIM BR, com a finalidade de promover um ambiente adequado ao investimento em Building Information Modelling– BIM e sua difusão no País”. (BRASIL,2018)
+
+Além do incentivo do Governo Federal ao uso de BIM, é possível constatar que o arcabouço normativo para BIM começou a ganhar corpo nos últimos anos, com a publicação de diversas normas técnicas pela ABNT.
+
+Estas iniciativas indicam que existem uma tendência de aumento na quantidade de contratos de projetos de arquitetura, urbanismo e engenharia que vão precisar atender a requisitos relacionados a BIM, seja na utilização de processos BIM ou no recebimento e avaliação da qualidade de modelos BIM.
+
+Uma vez que, cada vez mais, existirão contratos que fazem uso de BIM, como se dará a relação entre as partes (contratantes e contratados) no que diz respeito à Leis, decretos, resoluções, portarias, normas técnicas e outros dispositivos de regulação?
+
+O que deverá ser observado, do ponto de vista da aprovação de projetos em prefeituras, das Leis de licitações, do Código de Defesa do Consumidor, da Lei Geral de Proteção de Dados, da Lei de Acesso à Informação, da Lei de Conflito de Interesses no Setor Público, entre tantas outras?
+
+Ou seja, o que deverá ser observado pelo cidadão, do ponto de vista dos seus direitos e deveres, quando este passa a contratar ou ser contratado para prestar um serviço que faz uso de processos e modelos BIM?
+
+Esta é a questão que justifica o desenvolvimento deste curso, que pretende apresentar e discutir, com estudantes e profissionais da arquitetura e urbanismo, engenharias, assim como do setor jurídico e securitário, uma parte representativa do atual arcabouço regulatório que se relaciona com BIM, direta ou indiretamente.
+
+Acredita-se que o curso pode contribuir para que os alunos possam melhorar sua compreensão sobre a relação entre BIM e a legislação, identificar oportunidades e ameaças e, assim, possam definir os seus planos de ação a partir de um conhecimento mais sólido e realista do arcabouço regulamentar que nos permitirá atuar, utilizando BIM, de forma a entender os limites entre seus direitos e deveres.
+Referências
+BRASIL. Decreto 9.377/2018, Institui a Estratégia Nacional de Disseminação do Building Information Modelling (revogado pelo Decreto 9983/2019). Brasília, DF. DOU, 2018.
+CODIC. Cartilha da Cidadania – a cidadania ao alcance de todos. Curitiba, PR: SEJU, 2015.</textarea>
                         </div>
+                      </div>
+                    </div>
+                    <div class="card accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#accordionTwo"
+                          aria-expanded="false"
+                          aria-controls="accordionTwo"
+                        >
+                          Dados Técnicos
+                        </button>
+                      </h2>
+                      <div
+                        id="accordionTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">– Curso de 26 horas: 21 horas de aula em grupo + 5 horas de plantão de dúvidas individual;
+– Plantão de dúvidas telefônico ou on-line por 6 meses, em horário comercial;
+– O material didático do curso é disponibilizado on-line, sob forma de apresentação em PowerPoint, rico em referências bibliográficas para ampliar seus estudos;
+– EXCLUSIVO: Você recebe um link para ter acesso à todas as suas aulas, que são gravadas, ao vivo, em vídeo! O prazo pra você baixar as suas aulas em vídeo é de três meses a partir do início do curso;
+– Nossos cursos contam como atividades complementares em cursos de graduação de arquitetura, engenharia e design;
+– Você será convidado, no Facebook, para que tenha acesso ao grupo TI Lab Alunos, onde pode conferir oportunidades de trabalho, promoções e outros conteúdos.</textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button
+                          type="button"
+                          class="accordion-button collapsed"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#accordionThree"
+                          aria-expanded="false"
+                          aria-controls="accordionThree"
+                        >
+                          Disponibilidade
+                        </button>
+                      </h2>
+                      <div
+                        id="accordionThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                        <div class="col-md">
+                          <small class="text-light fw-semibold d-block">Período do dia</small>
+                          <div class="form-check form-check-inline mt-3">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                            <label class="form-check-label" for="inlineCheckbox1">manhã</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                            <label class="form-check-label" for="inlineCheckbox2">tarde</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" />
+                            <label class="form-check-label" for="inlineCheckbox3">noite</label>
+                          </div>
+                        </div>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10">Para aulas durante a semana
+Número de aulas e duração de cada aula
+Se o curso vai acontecer durante a semana, você terá 7 aulas. A duração de cada aula é de três horas.
+
+Quantidade e frequência das aulas durante a semana
+Quanto à quantidade e frequência de dias da semana, estas são as suas opções:
+– uma vez por semana, de segundas, terças, quartas, quintas ou sextas
+
+Grade horária
+Abaixo está a grade horária do TI Lab disponível para este curso, durante a semana. As aulas acontecem sempre dentro destas faixas de horário:
+– 9h às 12h
+– 14h às 17h
+– 19h às 22h
+</textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+				  <p>
+                <!-- Form controls -->
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Form Controls</h5>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlReadOnlyInput1" class="form-label">Read only</label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="exampleFormControlReadOnlyInput1"
+                          placeholder="Readonly input here..."
+                          readonly
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlReadOnlyInputPlain1" class="form-label">Read plain</label>
+                        <input
+                          type="text"
+                          readonly
+                          class="form-control-plaintext"
+                          id="exampleFormControlReadOnlyInputPlain1"
+                          value="email@example.com"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlSelect1" class="form-label">Example select</label>
+                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleDataList" class="form-label">Datalist example</label>
+                        <input
+                          class="form-control"
+                          list="datalistOptions"
+                          id="exampleDataList"
+                          placeholder="Type to search..."
+                        />
+                        <datalist id="datalistOptions">
+                          <option value="San Francisco"></option>
+                          <option value="New York"></option>
+                          <option value="Seattle"></option>
+                          <option value="Los Angeles"></option>
+                          <option value="Chicago"></option>
+                        </datalist>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlSelect2" class="form-label">Example multiple select</label>
+                        <select
+                          multiple
+                          class="form-select"
+                          id="exampleFormControlSelect2"
+                          aria-label="Multiple select example"
+                        >
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Input Sizing -->
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Input Sizing</h5>
+                    <div class="card-body">
+                      <small class="text-light fw-semibold">Input text</small>
+
+                      <div class="mt-2 mb-3">
+                        <label for="largeInput" class="form-label">Large input</label>
+                        <input
+                          id="largeInput"
+                          class="form-control form-control-lg"
+                          type="text"
+                          placeholder=".form-control-lg"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="defaultInput" class="form-label">Default input</label>
+                        <input id="defaultInput" class="form-control" type="text" placeholder="Default input" />
+                      </div>
+                      <div>
+                        <label for="smallInput" class="form-label">Small input</label>
+                        <input
+                          id="smallInput"
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder=".form-control-sm"
+                        />
+                      </div>
+                    </div>
+                    <hr class="m-0" />
+                    <div class="card-body">
+                      <small class="text-light fw-semibold">Input select</small>
+                      <div class="mt-2 mb-3">
+                        <label for="largeSelect" class="form-label">Large select</label>
+                        <select id="largeSelect" class="form-select form-select-lg">
+                          <option>Large select</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="defaultSelect" class="form-label">Default select</label>
+                        <select id="defaultSelect" class="form-select">
+                          <option>Default select</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label for="smallSelect" class="form-label">Small select</label>
+                        <select id="smallSelect" class="form-select form-select-sm">
+                          <option>Small select</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Default Checkboxes and radios & Default checkboxes and radios -->
+                <div class="col-xl-6">
+                  <div class="card mb-4">
+                    <h5 class="card-header">Checkboxes and Radios</h5>
+                    <!-- Checkboxes and Radios -->
+                    <div class="card-body">
+                      <div class="row gy-3">
+                        <div class="col-md">
+                          <small class="text-light fw-semibold">Checkboxes</small>
+                          <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                            <label class="form-check-label" for="defaultCheck1"> Unchecked </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" checked />
+                            <label class="form-check-label" for="defaultCheck2"> Indeterminate </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked />
+                            <label class="form-check-label" for="defaultCheck3"> Checked </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="disabledCheck1" disabled />
+                            <label class="form-check-label" for="disabledCheck1"> Disabled Unchecked </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="disabledCheck2"
+                              disabled
+                              checked
+                            />
+                            <label class="form-check-label" for="disabledCheck2"> Disabled Checked </label>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <small class="text-light fw-semibold">Radio</small>
+                          <div class="form-check mt-3">
+                            <input
+                              name="default-radio-1"
+                              class="form-check-input"
+                              type="radio"
+                              value=""
+                              id="defaultRadio1"
+                            />
+                            <label class="form-check-label" for="defaultRadio1"> Unchecked </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              name="default-radio-1"
+                              class="form-check-input"
+                              type="radio"
+                              value=""
+                              id="defaultRadio2"
+                              checked
+                            />
+                            <label class="form-check-label" for="defaultRadio2"> Checked </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" value="" id="disabledRadio1" disabled />
+                            <label class="form-check-label" for="disabledRadio1"> Disabled unchecked </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              value=""
+                              id="disabledRadio2"
+                              disabled
+                              checked
+                            />
+                            <label class="form-check-label" for="disabledRadio2"> Disabled checkbox </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="m-0" />
+                    <!-- Inline Checkboxes -->
+                    <div class="card-body">
+                      <div class="row gy-3">
+                        <div class="col-md">
+                          <small class="text-light fw-semibold d-block">Inline Checkboxes</small>
+                          <div class="form-check form-check-inline mt-3">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                            <label class="form-check-label" for="inlineCheckbox1">1</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                            <label class="form-check-label" for="inlineCheckbox2">2</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="inlineCheckbox3"
+                              value="option3"
+                              disabled
+                            />
+                            <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <small class="text-light fw-semibold d-block">Inline Radio</small>
+                          <div class="form-check form-check-inline mt-3">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="option1"
+                            />
+                            <label class="form-check-label" for="inlineRadio1">1</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2">2</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio3"
+                              value="option3"
+                              disabled
+                            />
+                            <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Switches -->
+                  <div class="card mb-4">
+                    <h5 class="card-header">Switches</h5>
+                    <div class="card-body">
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                        <label class="form-check-label" for="flexSwitchCheckDefault"
+                          >Default switch checkbox input</label
+                        >
+                      </div>
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                        <label class="form-check-label" for="flexSwitchCheckChecked"
+                          >Checked switch checkbox input</label
+                        >
+                      </div>
+                      <div class="form-check form-switch mb-2">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled />
+                        <label class="form-check-label" for="flexSwitchCheckDisabled"
+                          >Disabled switch checkbox input</label
+                        >
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="flexSwitchCheckCheckedDisabled"
+                          checked
+                          disabled
+                        />
+                        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled"
+                          >Disabled checked switch checkbox input</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Range -->
+                  <div class="card mb-4 mb-xl-0">
+                    <h5 class="card-header">Range</h5>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="formRange1" class="form-label">Example range</label>
+                        <input type="range" class="form-range" id="formRange1" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="disabledRange" class="form-label">Disabled range</label>
+                        <input type="range" class="form-range" id="disabledRange" disabled />
+                      </div>
+                      <div class="mb-3">
+                        <label for="formRange2" class="form-label">Min and max</label>
+                        <input type="range" class="form-range" min="0" max="5" id="formRange2" />
+                      </div>
+                      <div>
+                        <label for="formRange3" class="form-label">Steps</label>
+                        <input type="range" class="form-range" min="0" max="5" step="0.5" id="formRange3" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <!-- HTML5 Inputs -->
+                  <div class="card mb-4">
+                    <h5 class="card-header">HTML5 Inputs</h5>
+                    <div class="card-body">
+                      <div class="mb-3 row">
+                        <label for="html5-text-input" class="col-md-2 col-form-label">Text</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="text" value="Sneat" id="html5-text-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-search-input" class="col-md-2 col-form-label">Search</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="search" value="Search ..." id="html5-search-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-email-input" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="email" value="john@example.com" id="html5-email-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-url-input" class="col-md-2 col-form-label">URL</label>
+                        <div class="col-md-10">
+                          <input
+                            class="form-control"
+                            type="url"
+                            value="https://themeselection.com"
+                            id="html5-url-input"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-tel-input" class="col-md-2 col-form-label">Phone</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="tel" value="90-(164)-188-556" id="html5-tel-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-password-input" class="col-md-2 col-form-label">Password</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="password" value="password" id="html5-password-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-number-input" class="col-md-2 col-form-label">Number</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="number" value="18" id="html5-number-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-datetime-local-input" class="col-md-2 col-form-label">Datetime</label>
+                        <div class="col-md-10">
+                          <input
+                            class="form-control"
+                            type="datetime-local"
+                            value="2021-06-18T12:30:00"
+                            id="html5-datetime-local-input"
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-date-input" class="col-md-2 col-form-label">Date</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-month-input" class="col-md-2 col-form-label">Month</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="month" value="2021-06" id="html5-month-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-week-input" class="col-md-2 col-form-label">Week</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="week" value="2021-W25" id="html5-week-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-time-input" class="col-md-2 col-form-label">Time</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="time" value="12:30:00" id="html5-time-input" />
+                        </div>
+                      </div>
+                      <div class="mb-3 row">
+                        <label for="html5-color-input" class="col-md-2 col-form-label">Color</label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="color" value="#666EE8" id="html5-color-input" />
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for="html5-range" class="col-md-2 col-form-label">Range</label>
+                        <div class="col-md-10">
+                          <input type="range" class="form-range mt-3" id="html5-range" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- File input -->
+                  <div class="card">
+                    <h5 class="card-header">File input</h5>
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <label for="formFile" class="form-label">Default file input example</label>
+                        <input class="form-control" type="file" id="formFile" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple />
+                      </div>
+                      <div>
+                        <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+                        <input class="form-control" type="file" id="formFileDisabled" disabled />
                       </div>
                     </div>
                   </div>
