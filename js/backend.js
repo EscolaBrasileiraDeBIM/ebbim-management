@@ -125,3 +125,25 @@ function addPessoa() {
     }
   })
 }
+
+function removePessoa() {
+  var id = document.getElementById("inputId").value.toString();
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/DeletarPessoa.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'id': id
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+      response.json().then(function(data) {
+        alert("Removido");
+      });
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
