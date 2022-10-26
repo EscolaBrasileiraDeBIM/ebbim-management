@@ -700,9 +700,34 @@
                         <label for="floatingInput">Horas aula</label></div>
                     </div>
                   </div>
-				  <div class="card mb-4">
-                    <div class="card-body">
-					<h7> Carga Horária<h7><p>
+                  </div>
+                </div>
+<div class="row">
+  <div class="col"><label for="exampleFormControlSelect2" class="form-label">Instrutores</label>
+                        <select
+                          multiple
+                          class="form-select"
+                          id="exampleFormControlSelect2"
+                          aria-label="Multiple select example"
+                        >
+                          <option selected>João</option>
+                          <option value="1">Giulia</option>
+                          <option value="2">Ian</option>
+                          <option value="3">Gustavo</option>
+                        </select></div>
+  <div class="col"><label for="exampleFormControlSelect2" class="form-label">Softwares usados</label>
+                        <select
+                          multiple
+                          class="form-select"
+                          id="exampleFormControlSelect2"
+                          aria-label="Multiple select example"
+                        >
+                          <option selected>X</option>
+                          <option value="1">Y</option>
+                          <option selected>W</option>
+                          <option value="3">Z</option>
+                        </select></div>
+  <div class="col"><label class="form-label">Carga Horária</label>
 					  <div class="form-floating">
                         <input
                           type="text"
@@ -724,8 +749,7 @@
                           aria-describedby="floatingInputHelp"
                         />
                         <label for="floatingInput">Horas de plantão</label></div>
-						<p>
-						<table>
+						<p><table>
 							<tr>
 							<th></th>
 							<th>Duração de aulas</th>
@@ -761,10 +785,9 @@
 							placeholder=""
 							value="7"/></th>
 							</tr>
-						</table>
-                    </div>
-                  </div>
-                </div>
+						</table></div>
+  <div class="w-100"></div>
+</div>
                   <div class="accordion mt-3" id="accordionExample">
                     <div class="card accordion-item active">
                       <h2 class="accordion-header" id="headingOne">
@@ -779,7 +802,6 @@
                           Descrição
                         </button>
                       </h2>
-
                       <div
                         id="accordionOne"
                         class="accordion-collapse collapse show"
