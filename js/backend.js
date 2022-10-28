@@ -167,7 +167,7 @@ function searchPessoa() {
         document.getElementById("inputRazaoSocial").value = data.razaoSocial;
         document.getElementById("inputIe").value = data.ie;
         document.getElementById("inputIm").value = data.im;
-        document.getElementById("inputPJ").checked = !data.pf;
+        document.getElementById("inputPJ").checked = !isTrue(data.pf);
         alert(data.pf);
       });
     }
@@ -176,4 +176,15 @@ function searchPessoa() {
       alert("Erro");
     }
   })
+}
+
+function isTrue(valor) {
+  if (valor == 1)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 }
