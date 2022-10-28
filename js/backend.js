@@ -168,7 +168,7 @@ function searchPessoa() {
         document.getElementById("inputIe").value = data.ie;
         document.getElementById("inputIm").value = data.im;
         document.getElementById("inputPJ").checked = !isTrue(data.pf);
-        document.getElementById("inputEstrangeiro").checked = isTrue(data.pf);
+        document.getElementById("inputEstrangeiro").checked = isTrue(data.estrangeiro);
       });
     }
     else
