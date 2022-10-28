@@ -154,7 +154,19 @@ function searchPessoa() {
     if (response.ok)
     {
       response.json().then(function(data) {
+
         alert("Encontrado");
+        document.getElementById("inputNome").value = data.nome;
+        document.getElementById("inputApelido").value = data.apelido;
+        document.getElementById("inputEmpresa").value = data.empresa;
+        document.getElementById("inputCpfcnpj").value = data.cpfCnpj;
+        document.getElementById("inputRg").value = data.rg;
+        document.getElementById("inputDataNascimento").value = data.dataNascimento;
+        document.getElementById("inputFornecedor").value = data.fornecedor;
+        document.getElementById("inputComentario").value = data.comentario;
+        document.getElementById("inputRazaoSocial").value = data.razaoSocial;
+        document.getElementById("inputIe").value = data.ie;
+        document.getElementById("inputIm").value = data.im;
       });
     }
     else
