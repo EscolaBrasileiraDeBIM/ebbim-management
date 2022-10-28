@@ -150,13 +150,7 @@ function removePessoa() {
 
 function searchPessoa() {
   var id = document.getElementById("inputId").value.toString();
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/GetPessoa.php', {
-  method: "GET",
-  body: new URLSearchParams({
-    'id': id
-  }),
-  headers: {"Content-type": "application/x-www-form-urlencoded"}
-  }).then((response) => {
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/GetPessoa.php?id=' + id).then((response) => {
     if (response.ok)
     {
       response.json().then(function(data) {
