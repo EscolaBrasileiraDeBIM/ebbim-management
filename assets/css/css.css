@@ -53,3 +53,7 @@
 .middle {
   width: 50%;
 }
+
+.form-floating {
+    display: flex;
+}
