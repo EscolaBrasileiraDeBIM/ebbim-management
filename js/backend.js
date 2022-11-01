@@ -169,15 +169,15 @@ function searchPessoa() {
         {
           if (data.genero = "Masculino")
           {
-            document.getElementById("inputMasculino").checked;
+            document.getElementById("inputMasculino").checked = true;
           }
           else if (data.genero = "Feminino")
           {
-            document.getElementById("inputFeminino").checked;
+            document.getElementById("inputFeminino").checked = true;
           }
           else
           {
-            document.getElementById("inputOutros").checked;
+            document.getElementById("inputOutros").checked = true;
           }
         }
         alert("Encontrado");
