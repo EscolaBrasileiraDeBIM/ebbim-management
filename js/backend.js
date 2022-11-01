@@ -137,9 +137,7 @@ function removePessoa() {
   }).then((response) => {
     if (response.ok)
     {
-      response.json().then(function(data) {
-        alert("Removido");
-      });
+      alert("Removido");
     }
     else
     {
