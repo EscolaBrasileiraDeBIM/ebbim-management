@@ -463,7 +463,6 @@
                   <button class="btn btn-primary btnCrud" type="button" id="btnAdd" onclick="addPessoa()"><i class="tf-icons bx bx-plus iconCrud"></i></button>
                   <button class="btn btn-primary btnCrud" type="button" id="btnRemove" onclick="removePessoa()"><i class="tf-icons bx bx-minus iconCrud"></i></button>
                   <button class="btn btn-primary btnCrud" type="button" id="btnSearch" onclick="searchPessoa()"><i class="tf-icons bx bx-search iconCrud"></i></button>
-                  <button class="btn btn-primary btnCrud" type="button" id="btnEdit" onclick="editPessoa()"><i class="tf-icons bx bxs-edit iconCrud"></i></button>
                 </div>
               </div>
                 <div class="col-md-6">
@@ -493,7 +492,7 @@
                             aria-describedby="floatingInputHelp"
                           />
                           <label for="inputNome">Nome</label>
-                          <button class="btn btn-outline-primary" type="button"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                          <button class="btn btn-outline-primary" type="button" onclick="editPessoa('nome')"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
                         </div>
                       </div>
                       <div class="mb-3" id="divApelido">
