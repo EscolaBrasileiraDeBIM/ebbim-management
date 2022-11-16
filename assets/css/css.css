@@ -61,3 +61,13 @@
 .iconEdit {
     font-size: 1.5rem;
 }
+
+.form-control {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.btnEdit {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
