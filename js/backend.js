@@ -221,10 +221,12 @@ function editPessoa(campo) {
   })
 }
 
-function showBtnEdit(btn) {
-  document.getElementById(btn).style.display="block";
+function showBtnEdit(inputId) {
+  btnId = "btn" + inputId.slice(-5);
+  document.getElementById(btnId).style.display="block";
 }
 
-function hideBtnEdit(btn) {
-  document.getElementById(btn).style.display="none";
+function hideBtnEdit(inputId) {
+  btnId = "btn" + inputId.slice(-5);
+  document.getElementById(btnId).style.display="none";
 }
