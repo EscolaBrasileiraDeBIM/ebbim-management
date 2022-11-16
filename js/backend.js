@@ -222,11 +222,11 @@ function editPessoa(campo) {
 }
 
 function showBtnEdit(inputId) {
-  btnId = "btn" + inputId.slice(-5);
+  btnId = "btn" + inputId.slice(5);
   document.getElementById(btnId).style.display="block";
 }
 
 function hideBtnEdit(inputId) {
-  btnId = "btn" + inputId.slice(-5);
+  btnId = "btn" + inputId.slice(5);
   document.getElementById(btnId).style.display="none";
 }
