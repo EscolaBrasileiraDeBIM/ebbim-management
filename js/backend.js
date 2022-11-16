@@ -224,3 +224,7 @@ function editPessoa(campo) {
 function showBtnEdit(btn) {
   document.getElementById(btn).style.display="block";
 }
+
+function hideBtnEdit(btn) {
+  document.getElementById(btn).style.display="none";
+}
