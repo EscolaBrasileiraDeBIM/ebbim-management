@@ -222,7 +222,7 @@ function editPessoa(campo) {
 }
 
 function showBtnEdit(inputId) {
-  btnId = "btn" + inputId.slice(5);
+  btnId = "btnEdit" + inputId.slice(5);
   document.getElementById(btnId.toString()).style.display="block";
 }
 
