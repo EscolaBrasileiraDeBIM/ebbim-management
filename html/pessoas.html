@@ -490,9 +490,10 @@
                             id="inputNome"
                             placeholder="Thor teste"
                             aria-describedby="floatingInputHelp"
+                            onfocus="showBtnEdit('btnEditNome')"
                           />
                           <label for="inputNome">Nome</label>
-                          <button class="btn btn-outline-primary btnEdit" type="button" onclick="editPessoa('nome')"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                          <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa('nome')"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
                         </div>
                       </div>
                       <div class="mb-3" id="divApelido">
