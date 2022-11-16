@@ -223,11 +223,11 @@ function editPessoa(campo) {
 
 function showBtnEdit(inputId) {
   btnId = "btn" + inputId.slice(5);
-  document.getElementById(btnId).style.display="block";
+  btnId.style.display="block";
 }
 
 function hideBtnEdit(inputId) {
   btnId = "btnEdit" + inputId.slice(5);
   console.log(inputId + " " + btnId);
-  document.getElementById(btnId.toString()).style.display="none";
+  btnId.toString().style.display="none";
 }
