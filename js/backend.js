@@ -223,7 +223,7 @@ function editPessoa(campo) {
 
 function showBtnEdit(inputId) {
   btnId = "btn" + inputId.slice(5);
-  document.getElementById(btnId).style.display="block";
+  document.getElementById(btnId.toString()).style.display="block";
 }
 
 function hideBtnEdit(inputId) {
