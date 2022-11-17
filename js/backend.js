@@ -207,7 +207,6 @@ function editPessoa(btnId) {
   valor = document.getElementById(inputId).value;
   campo = btnId.slice(7).toLowerCase();
   campoSql = "";
-  alert(campo);
   switch (campo) {
     case "nome":
       campoSql = "nm_pessoa";
