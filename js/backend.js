@@ -241,14 +241,13 @@ function editPessoa(btnId) {
   body: new URLSearchParams({
     'id': id,
     'campo': campoSql,
-    'novoCampo': valor
-
+    'novoValor': valor
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
   }).then((response) => {
     if (response.ok)
     {
-      alert("Removido");
+      alert("Atulizado o campo" + campoSql);
     }
     else
     {
