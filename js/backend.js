@@ -263,5 +263,8 @@ function showBtnEdit(inputId) {
 
 function hideBtnEdit(inputId) {
   btnId = "btnEdit" + inputId.slice(5);
-  document.getElementById(btnId).style.display="none";
+  if (document.activeElement != document.getElementById(btnId))
+  {
+    document.getElementById(btnId).style.display="none";
+  }
 }
