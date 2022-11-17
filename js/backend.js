@@ -248,7 +248,7 @@ function editPessoa(btnId) {
   }).then((response) => {
     if (response.ok)
     {
-      alert("Atulizado o campo" + campoSql);
+      alert("Atulizado o campo de " + campo + " para " + valor);
     }
     else
     {
