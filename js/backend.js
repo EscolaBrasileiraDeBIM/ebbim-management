@@ -201,12 +201,47 @@ function isTrue(valor) {
   }
 }
 
-function editPessoa(campo) {
-  var valor = document.getElementById("inputId").value.toString();
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/DeletarPessoa.php', {
+function editPessoa(btnId) {
+  var inputId = "input" + btnId.slice(7);
+  valor = document.getElementById(inputId).value;
+  campo = btnId.slice(8).toLowerCase();
+  campoSql = "";
+  switch (campo) {
+    case "nome":
+      campoSql = "nm_pessoa";
+      break;
+    case "apelido":
+      campoSql = "nm_apelido";
+      break;
+    case "razaosocial":
+      campoSql = "nm_razao_social";
+      break;
+    case "empresa":
+      campoSql = "nm_empresa";
+      break;
+    case "cpfcnpj":
+      campoSql = "cd_cpf_cnpj";
+      break;
+    case "ie":
+      campoSql = "cd_inscricao_estadual";
+      break;
+    case "im":
+      campoSql = "cd_inscricao_municipal";
+      break;
+    case "rg":
+      campoSql = "cd_rg";
+      break;
+    default:
+      campoSql = "";
+    
+  }
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/ChangePessoa.php', {
   method: "POST",
   body: new URLSearchParams({
-    'id': id
+    'id': id,
+    'campo': campoSql,
+    'novoCampo': valor
+
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
   }).then((response) => {

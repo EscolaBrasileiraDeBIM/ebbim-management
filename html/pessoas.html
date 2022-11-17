@@ -494,7 +494,7 @@
                             onfocusout="hideBtnEdit(this.id)"
                           />
                           <label for="inputNome">Nome</label>
-                          <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa('nome')"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                          <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa(this.id)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
                         </div>
                       </div>
                       <div class="mb-3" id="divApelido">
@@ -505,6 +505,8 @@
                             id="inputApelido"
                             placeholder="Totó"
                             aria-describedby="floatingInputHelp"
+                            onfocus="showBtnEdit(this.id)"
+                            onfocusout="hideBtnEdit(this.id)"
                           />
                           <label for="inputApelido">Apelido</label>
                         </div>
