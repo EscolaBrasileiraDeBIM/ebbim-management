@@ -262,6 +262,6 @@ function showBtnEdit(inputId) {
 }
 
 function hideBtnEdit(inputId) {
-  //btnId = "btnEdit" + inputId.slice(5);
-  //document.getElementById(btnId).style.display="none";
+  btnId = "btnEdit" + inputId.slice(5);
+  document.getElementById(btnId).style.display="none";
 }
