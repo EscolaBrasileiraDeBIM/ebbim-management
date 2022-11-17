@@ -202,6 +202,7 @@ function isTrue(valor) {
 }
 
 function editPessoa(btnId) {
+  id = document.getElementById("inputId").value.toString();
   var inputId = "input" + btnId.slice(7);
   valor = document.getElementById(inputId).value;
   campo = btnId.slice(8).toLowerCase();
