@@ -33,31 +33,6 @@ function btnAlertClose() {
   document.getElementById("usernameSpan").innerText = localStorage.getItem('nome');
 } */
 
-function changePJ() {
-  if (document.getElementById("inputPJ").checked)
-  {
-    document.getElementById("divApelido").style.display="none";
-    document.getElementById("divRg").style.display="none";
-    document.getElementById("divGenero").style.display="none";
-    document.getElementById("divDataNascimento").style.display="none";
-
-    document.getElementById("divRazaoSocial").style.display="block";
-    document.getElementById("divIm").style.display="block";
-    document.getElementById("divIe").style.display="block";
-  }
-  else
-  {
-    document.getElementById("divApelido").style.display="block";
-    document.getElementById("divRg").style.display="block";
-    document.getElementById("divGenero").style.display="block";
-    document.getElementById("divDataNascimento").style.display="block";
-
-    document.getElementById("divRazaoSocial").style.display="none";
-    document.getElementById("divIm").style.display="none";
-    document.getElementById("divIe").style.display="none";
-  }
-}
-
 function addPessoa() {
   var nome = document.getElementById("inputNome").value.toString();
   var apelido = document.getElementById("inputApelido").value.toString();
@@ -201,61 +176,6 @@ function isTrue(valor) {
   }
 }
 
-function editPessoa(btnId) {
-  id = document.getElementById("inputId").value.toString();
-  var inputId = "input" + btnId.slice(7);
-  valor = document.getElementById(inputId).value;
-  campo = btnId.slice(7).toLowerCase();
-  campoSql = "";
-  switch (campo) {
-    case "nome":
-      campoSql = "nm_pessoa";
-      break;
-    case "apelido":
-      campoSql = "nm_apelido";
-      break;
-    case "razaosocial":
-      campoSql = "nm_razao_social";
-      break;
-    case "empresa":
-      campoSql = "nm_empresa";
-      break;
-    case "cpfcnpj":
-      campoSql = "cd_cpf_cnpj";
-      break;
-    case "ie":
-      campoSql = "cd_inscricao_estadual";
-      break;
-    case "im":
-      campoSql = "cd_inscricao_municipal";
-      break;
-    case "rg":
-      campoSql = "cd_rg";
-      break;
-    default:
-      campoSql = "";
-    
-  }
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/ChangePessoa.php', {
-  method: "POST",
-  body: new URLSearchParams({
-    'id': id,
-    'campo': campoSql,
-    'novoValor': valor
-  }),
-  headers: {"Content-type": "application/x-www-form-urlencoded"}
-  }).then((response) => {
-    if (response.ok)
-    {
-      alert("Atulizado o campo de " + campo + " para " + valor);
-    }
-    else
-    {
-      alert("Erro");
-    }
-  })
-}
-
 function showBtnEdit(inputId) {
   btnId = "btnEdit" + inputId.slice(5);
   document.getElementById(btnId).style.display="block";
@@ -264,4 +184,114 @@ function showBtnEdit(inputId) {
 function hideBtnEdit(inputId) {
   //btnId = "btnEdit" + inputId.slice(5);
   //document.getElementById(btnId).style.display="none";
+}
+
+function editPessoa(objectId) {
+  idPessoa = document.getElementById("inputId").value.toString();
+  if (idPessoa)
+  {
+    objectType = document.getElementById("inputPJ").type;
+    if (objectType == 'button')
+    {
+      inputId = "input" + objectId.slice(7);
+      campo = objectId.slice(7).toLowerCase();
+      campoSql = "";
+      switch (campo) {
+        case "nome":
+          campoSql = "nm_pessoa";
+          break;
+        case "apelido":
+          campoSql = "nm_apelido";
+          break;
+        case "razaosocial":
+          campoSql = "nm_razao_social";
+          break;
+        case "empresa":
+          campoSql = "nm_empresa";
+          break;
+        case "cpfcnpj":
+          campoSql = "cd_cpf_cnpj";
+          break;
+        case "ie":
+          campoSql = "cd_inscricao_estadual";
+          break;
+        case "im":
+          campoSql = "cd_inscricao_municipal";
+          break;
+        case "rg":
+          campoSql = "cd_rg";
+          break;
+        default:
+          campoSql = "";
+      }
+    }
+    else
+    {
+      inputId = objectId;
+      campo = inputId.slice(5).toLowerCase();
+      campoSql = "";
+      switch (campo) {
+        case "pj":
+          campoSql = "ic_pf";
+          break;
+        case "estrangeiro":
+          campoSql = "ic_estrangeiro";
+          break;
+        case "masculino": case "feminino": case "outros":
+          campoSql = "nm_razao_social";
+          break;
+        default:
+          campoSql = "";
+      }
+    }
+    valor = document.getElementById(inputId).value;
+    fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/ChangePessoa.php', {
+    method: "POST",
+    body: new URLSearchParams({
+      'id': idPessoa,
+      'campo': campoSql,
+      'novoValor': valor
+    }),
+    headers: {"Content-type": "application/x-www-form-urlencoded"}
+    }).then((response) => {
+      if (response.ok)
+      {
+        alert("Atulizado o campo de " + campo + " para " + valor);
+      }
+      else
+      {
+        alert("Erro");
+      }
+    })
+  }
+}
+
+function changeCheck(inputId) {
+  input 
+
+  if (document.getElementById("inputPJ").checked)
+  {
+    document.getElementById("divApelido").style.display="none";
+    document.getElementById("divRg").style.display="none";
+    document.getElementById("divGenero").style.display="none";
+    document.getElementById("divDataNascimento").style.display="none";
+
+    document.getElementById("divRazaoSocial").style.display="block";
+    document.getElementById("divIm").style.display="block";
+    document.getElementById("divIe").style.display="block";
+
+
+
+  }
+  else
+  {
+    document.getElementById("divApelido").style.display="block";
+    document.getElementById("divRg").style.display="block";
+    document.getElementById("divGenero").style.display="block";
+    document.getElementById("divDataNascimento").style.display="block";
+
+    document.getElementById("divRazaoSocial").style.display="none";
+    document.getElementById("divIm").style.display="none";
+    document.getElementById("divIe").style.display="none";
+  }
 }
