@@ -233,6 +233,28 @@ function editPessoa(objectId) {
       switch (campo) {
         case "pj":
           campoSql = "ic_pf";
+          if (document.getElementById("inputPJ").checked)
+          {
+            document.getElementById("divApelido").style.display="none";
+            document.getElementById("divRg").style.display="none";
+            document.getElementById("divGenero").style.display="none";
+            document.getElementById("divDataNascimento").style.display="none";
+        
+            document.getElementById("divRazaoSocial").style.display="block";
+            document.getElementById("divIm").style.display="block";
+            document.getElementById("divIe").style.display="block";
+          }
+          else
+          {
+            document.getElementById("divApelido").style.display="block";
+            document.getElementById("divRg").style.display="block";
+            document.getElementById("divGenero").style.display="block";
+            document.getElementById("divDataNascimento").style.display="block";
+        
+            document.getElementById("divRazaoSocial").style.display="none";
+            document.getElementById("divIm").style.display="none";
+            document.getElementById("divIe").style.display="none";
+          }
           break;
         case "estrangeiro":
           campoSql = "ic_estrangeiro";
@@ -263,35 +285,5 @@ function editPessoa(objectId) {
         alert("Erro");
       }
     })
-  }
-}
-
-function changeCheck(inputId) {
-  input 
-
-  if (document.getElementById("inputPJ").checked)
-  {
-    document.getElementById("divApelido").style.display="none";
-    document.getElementById("divRg").style.display="none";
-    document.getElementById("divGenero").style.display="none";
-    document.getElementById("divDataNascimento").style.display="none";
-
-    document.getElementById("divRazaoSocial").style.display="block";
-    document.getElementById("divIm").style.display="block";
-    document.getElementById("divIe").style.display="block";
-
-
-
-  }
-  else
-  {
-    document.getElementById("divApelido").style.display="block";
-    document.getElementById("divRg").style.display="block";
-    document.getElementById("divGenero").style.display="block";
-    document.getElementById("divDataNascimento").style.display="block";
-
-    document.getElementById("divRazaoSocial").style.display="none";
-    document.getElementById("divIm").style.display="none";
-    document.getElementById("divIe").style.display="none";
   }
 }
