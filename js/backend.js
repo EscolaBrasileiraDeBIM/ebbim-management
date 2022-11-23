@@ -194,6 +194,7 @@ function editPessoa(objectId) {
     if (objectType == 'button')
     {
       inputId = "input" + objectId.slice(7);
+      valor = document.getElementById(inputId).value;
       campo = objectId.slice(7).toLowerCase();
       campoSql = "";
       switch (campo) {
@@ -228,6 +229,7 @@ function editPessoa(objectId) {
     else
     {
       inputId = objectId;
+      valor = document.getElementById(inputId).checked;
       campo = inputId.slice(5).toLowerCase();
       campoSql = "";
       switch (campo) {
@@ -266,7 +268,6 @@ function editPessoa(objectId) {
           campoSql = "";
       }
     }
-    valor = document.getElementById(inputId).value;
     fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/ChangePessoa.php', {
     method: "POST",
     body: new URLSearchParams({
