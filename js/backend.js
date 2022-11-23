@@ -266,7 +266,7 @@ function editPessoa(objectId) {
           campoSql = "ic_estrangeiro";
           break;
         case "masculino": case "feminino": case "outros":
-          campoSql = "nm_razao_social";
+          campoSql = "ic_genero";
           break;
         default:
           campoSql = "";
