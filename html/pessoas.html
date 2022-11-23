@@ -476,7 +476,7 @@
                               <label class="form-check-label" for="flexSwitchCheckDefault">Pessoa jurídica</label>
                             </div>
                             <div class="col-md-6">
-                              <input class="form-check-input" type="checkbox" id="inputEstrangeiro">
+                              <input class="form-check-input" type="checkbox" id="inputEstrangeiro" onchange="editPessoa(this.id)">
                               <label class="form-check-label" for="flexSwitchCheckDefault">Estrangeiro</label>
                             </div>
                           </div>
@@ -605,15 +605,15 @@
                       <div class="col-md mb-3" id="divGenero">
                         <label class="col-md-4 col-form-label">Gênero</label>
                         <div class="form-check form-check-inline mt-3">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMasculino" value="option1" />
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMasculino" value="Masculino" />
                           <label class="form-check-label" for="inputMasculino">Masculino</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputFeminino" value="option2" />
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputFeminino" value="Feminino" />
                           <label class="form-check-label" for="inputFeminino">Feminino</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputOutros" value="option3" />
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputOutros" value="Outros" />
                           <label class="form-check-label" for="inputOutros">Outros</label>
                         </div>
                       </div>

@@ -230,6 +230,10 @@ function editPessoa(objectId) {
     {
       inputId = objectId;
       valor = + document.getElementById(inputId).checked;
+      if (objectType == 'radio')
+      {
+        valor = document.getElementById(inputId).value;
+      }
       campo = inputId.slice(5).toLowerCase();
       campoSql = "";
       switch (campo) {
