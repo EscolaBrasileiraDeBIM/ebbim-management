@@ -271,6 +271,9 @@ function editPessoa(objectId) {
         case "masculino": case "feminino": case "outros":
           campoSql = "ic_genero";
           break;
+        case "fornecedor":
+          campoSql = "nm_fornecedor";
+          break;
         default:
           campoSql = "";
       }
