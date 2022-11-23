@@ -229,8 +229,11 @@ function editPessoa(objectId) {
     else
     {
       inputId = objectId;
-      valor = + document.getElementById(inputId).checked;
-      if (objectType == 'radio')
+      if (objectType == 'checkbox')
+      {
+        valor = + document.getElementById(inputId).checked;
+      }
+      else
       {
         valor = document.getElementById(inputId).value;
       }
