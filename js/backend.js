@@ -279,7 +279,10 @@ function editPessoa(objectId) {
     }).then((response) => {
       if (response.ok)
       {
-        alert("Atulizado o campo de " + campo + " para " + valor);
+        if (objectType == 'button')
+        {
+          alert("Atulizado o campo de " + campo + " para " + valor);
+        }
       }
       else
       {
