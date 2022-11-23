@@ -229,7 +229,7 @@ function editPessoa(objectId) {
     else
     {
       inputId = objectId;
-      valor = document.getElementById(inputId).checked;
+      valor = + document.getElementById(inputId).checked;
       campo = inputId.slice(5).toLowerCase();
       campoSql = "";
       switch (campo) {
