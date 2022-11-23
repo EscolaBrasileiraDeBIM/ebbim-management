@@ -190,7 +190,7 @@ function editPessoa(objectId) {
   idPessoa = document.getElementById("inputId").value.toString();
   if (idPessoa)
   {
-    objectType = document.getElementById(objectType).type;
+    objectType = document.getElementById(objectId).type;
     if (objectType == 'button')
     {
       inputId = "input" + objectId.slice(7);
