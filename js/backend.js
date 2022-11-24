@@ -277,6 +277,9 @@ function editPessoa(objectId) {
         case "fornecedor":
           campoSql = "nm_fornecedor";
           break;
+        case "datanascimento":
+          campoSql = "dt_nascimento";
+          break;
         default:
           campoSql = "";
       }
