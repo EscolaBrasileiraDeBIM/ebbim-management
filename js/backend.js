@@ -222,6 +222,9 @@ function editPessoa(objectId) {
         case "rg":
           campoSql = "cd_rg";
           break;
+        case "comentario":
+          campoSql = "ds_comentario";
+          break;  
         default:
           campoSql = "";
       }
