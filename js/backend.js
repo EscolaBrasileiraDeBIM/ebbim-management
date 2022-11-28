@@ -181,9 +181,9 @@ function showBtnEdit(inputId) {
   document.getElementById(btnId).style.display="block";
 }
 
-function hideBtnEdit(inputId) {
+function hideBtnEdit(inputId, event) {
   btnId = "btnEdit" + inputId.slice(5);
-  console.log(document.activeElement + " " + btnId);
+  console.log(event.relatedTarget + " " + btnId);
   //document.getElementById(btnId).style.display="none";
 }
 
