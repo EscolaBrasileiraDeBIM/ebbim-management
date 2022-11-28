@@ -182,8 +182,8 @@ function showBtnEdit(inputId) {
 }
 
 function hideBtnEdit(inputId) {
-  alert(inputId);
   btnId = "btnEdit" + inputId.slice(5);
+  alert(btnId);
   document.getElementById(btnId).style.display="none";
 }
 
