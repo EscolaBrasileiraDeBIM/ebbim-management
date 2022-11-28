@@ -483,7 +483,7 @@
                         </div>
                       </div>
                       <div class="mb-3">
-                        <div class="form-floating">
+                        <div class="form-floating" onfocusout="hideBtnEdit(this.id)">
                           <input
                             type="text"
                             class="form-control"
@@ -491,7 +491,7 @@
                             placeholder="Thor teste"
                             aria-describedby="floatingInputHelp"
                             onfocus="showBtnEdit(this.id)"
-                            onfocusout="hideBtnEdit(this.id)"
+                            
                           />
                           <label for="inputNome">Nome</label>
                           <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa(this.id)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
