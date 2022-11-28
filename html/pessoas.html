@@ -506,7 +506,7 @@
                             placeholder="Totó"
                             aria-describedby="floatingInputHelp"
                             onfocus="showBtnEdit(this.id)"
-                            onfocusout="hideBtnEdit(this.id)"
+                            onfocusout="hideBtnEdit(this.id, event)"
                           />
                           <label for="inputApelido">Apelido</label>
                           <button class="btn btn-outline-primary btnEdit" id="btnEditApelido" type="button" onclick="editPessoa(this.id)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
