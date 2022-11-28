@@ -183,12 +183,9 @@ function showBtnEdit(inputId) {
 
 function hideBtnEdit(inputId, event) {
   btnId = "btnEdit" + inputId.slice(5);
-  if (event.relatedTarget)
+  if (!event.relatedTarget || event.relatedTarget.id != btnId)
   {
-    if (event.relatedTarget.id != btnId)
-    {
-      document.getElementById(btnId).style.display="none";
-    }
+    document.getElementById(btnId).style.display="none";
   }
 }
 
