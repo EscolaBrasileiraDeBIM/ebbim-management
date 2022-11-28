@@ -183,8 +183,10 @@ function showBtnEdit(inputId) {
 
 function hideBtnEdit(inputId, event) {
   btnId = "btnEdit" + inputId.slice(5);
-  console.log(event.relatedTarget.id + " " + btnId);
-  //document.getElementById(btnId).style.display="none";
+  if (event.relatedTarget.id != btnId)
+  {
+    document.getElementById(btnId).style.display="none";
+  }
 }
 
 function editPessoa(objectId) {
