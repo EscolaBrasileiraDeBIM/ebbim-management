@@ -130,7 +130,7 @@ function searchPessoa() {
         document.getElementById("inputNome").value = data.nome;
         document.getElementById("inputApelido").value = data.apelido;
         document.getElementById("inputEmpresa").value = data.empresa;
-        document.getElementById("inputCpfcnpj").value = data.cpfCnpj;
+        document.getElementById("inputCpfCnpj").value = data.cpfCnpj;
         document.getElementById("inputRg").value = data.rg;
         document.getElementById("inputDataNascimento").value = data.dataNascimento;
         document.getElementById("inputFornecedor").value = data.fornecedor;
