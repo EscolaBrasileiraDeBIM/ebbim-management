@@ -696,8 +696,8 @@
                         <div class="form-check form-switch mb-2">
                           <div class="row">
                             <div class="col-md-6">
-                              <input class="form-check-input" type="checkbox" id="inputPJ" onchange="editPessoa(this.id)">
-                              <label class="form-check-label" for="flexSwitchCheckDefault">Pessoa jurídica</label>
+                              <input class="form-check-input" type="checkbox" id="inputPrincipal" onchange="editPessoa(this.id)">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Principal</label>
                             </div>
                           </div>
                         </div>
@@ -707,14 +707,14 @@
                           <input
                             type="text"
                             class="form-control"
-                            id="inputNome"
-                            placeholder="Thor teste"
+                            id="inputEmail"
+                            placeholder="Thor@gmail.com"
                             aria-describedby="floatingInputHelp"
                             onfocus="showBtnEdit(this.id)"
                             onfocusout="hideBtnEdit(this.id, event)"
                           />
-                          <label for="inputNome">Nome</label>
-                          <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                          <label for="inputEmail">E-mail</label>
+                          <button class="btn btn-outline-primary btnEdit" id="btnEditEmail" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
                         </div>
                       </div>
                     </div>
