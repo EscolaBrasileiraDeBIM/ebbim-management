@@ -688,31 +688,33 @@
                   </div>
                 </div>
 
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <div class="mb-3">
-                      <div class="form-check form-switch mb-2">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <input class="form-check-input" type="checkbox" id="inputPJ" onchange="editPessoa(this.id)">
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Pessoa jurídica</label>
+                <div class="col-md-6">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <div class="mb-3">
+                        <div class="form-check form-switch mb-2">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <input class="form-check-input" type="checkbox" id="inputPJ" onchange="editPessoa(this.id)">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Pessoa jurídica</label>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="mb-3">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputNome"
-                          placeholder="Thor teste"
-                          aria-describedby="floatingInputHelp"
-                          onfocus="showBtnEdit(this.id)"
-                          onfocusout="hideBtnEdit(this.id, event)"
-                        />
-                        <label for="inputNome">Nome</label>
-                        <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                      <div class="mb-3">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inputNome"
+                            placeholder="Thor teste"
+                            aria-describedby="floatingInputHelp"
+                            onfocus="showBtnEdit(this.id)"
+                            onfocusout="hideBtnEdit(this.id, event)"
+                          />
+                          <label for="inputNome">Nome</label>
+                          <button class="btn btn-outline-primary btnEdit" id="btnEditNome" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                        </div>
                       </div>
                     </div>
                   </div>
