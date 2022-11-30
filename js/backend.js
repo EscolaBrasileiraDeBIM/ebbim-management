@@ -157,6 +157,21 @@ function searchPessoa() {
         }
         alert("Encontrado");
       });
+      searchEmail(id);
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
+
+function searchEmail(id) {
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/GetEmailsAA.php?idaa=' + id).then((response) => {
+    if (response.ok)
+    {
+      console.log(data);
+      alert("Encontrado");
     }
     else
     {
