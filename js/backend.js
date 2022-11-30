@@ -170,7 +170,7 @@ function searchEmail(id) {
   fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/GetEmailsAA.php?idaa=' + id).then((response) => {
     if (response.ok)
     {
-      console.log(data);
+      console.log(data.length);
       alert("Encontrado");
     }
     else
