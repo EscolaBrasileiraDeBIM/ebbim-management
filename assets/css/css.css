@@ -76,3 +76,11 @@
 .layoutContent {
     display: flex;
 }
+
+.colCard {
+    width: 48%;
+}
+
+.colCardRight {
+    margin-left: 2%;
+}
