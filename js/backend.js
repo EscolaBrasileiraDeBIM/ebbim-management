@@ -171,7 +171,9 @@ function searchEmail(id) {
     if (response.ok)
     {
       response.json().then(function(data) {
-        console.log(data.length);
+        data.forEach(id => {
+          console.log(id.id);
+        });
         alert("Encontrado");
       })
     }
