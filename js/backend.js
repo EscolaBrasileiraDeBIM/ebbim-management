@@ -170,14 +170,13 @@ function searchEmail(id) {
   fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/GetEmailsAA.php?idaa=' + id).then((response) => {
     if (response.ok)
     {
-      htmlEmail = '<div class="mb-3 row"> <div class="divInputEmail"> <div class="form-floating"><input type="text" class="form-control" id="inputEmail" placeholder="Thor@gmail.com" aria-describedby="floatingInputHelp" onfocus="showBtnEdit(this.id)" onfocusout="hideBtnEdit(this.id, event)" /> <label for="inputEmail">E-mail</label> <button class="btn btn-outline-primary btnEdit" id="btnEditEmail" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button> </div> </div> <div class="divInputPrincipal py-3"> <div class="form-check"> <input name="default-radio-1" class="form-check-input" type="radio" id="inputPrincipal" value="" id="defaultRadio2" checked="" onchange="editPessoa(this.id)"> </div> </div> </div>';
-      console.log(htmlEmail);
       response.json().then(function(data) {
+        i = 0;
         data.forEach(email => {
+          htmlEmail = '<div class="mb-3 row"> <div class="divInputEmail"> <div class="form-floating"><input type="text" class="form-control" id="inputEmail" placeholder="Thor@gmail.com" aria-describedby="floatingInputHelp" onfocus="showBtnEdit(this.id)" onfocusout="hideBtnEdit(this.id, event)" /> <label for="inputEmail">E-mail</label> <button class="btn btn-outline-primary btnEdit" id="btnEditEmail" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button> </div> </div> <div class="divInputPrincipal py-3"> <div class="form-check"> <input name="default-radio-1" class="form-check-input" type="radio" id="inputPrincipal" value="" id="defaultRadio2" checked="" onchange="editPessoa(this.id)"> </div> </div> </div>';
           document.getElementById("divCard").innerHTML+=htmlEmail;
-          console.log(email.id);
+          i++;
         });
-        alert("Encontrado");
       })
     }
     else
