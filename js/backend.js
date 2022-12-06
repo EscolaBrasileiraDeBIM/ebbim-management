@@ -172,7 +172,7 @@ function searchEmail(id) {
     {
       response.json().then(function(data) {
         i = 0;
-        divAdicionarEmail = document.getElementById("divAdicionarEmail").toString();
+        divAdicionarEmail = document.getElementById("divAdicionarEmail");
         document.getElementById("divAdicionarEmail").remove();
         data.forEach(email => {
           htmlEmail = '<div class="mb-3 row"> <div class="divInputEmail"> <div class="form-floating"><input type="text" class="form-control" id="inputEmail' + email.id + '" placeholder="Thor@gmail.com" value="' + email.email +'" aria-describedby="floatingInputHelp" onfocus="showBtnEdit(this.id)" onfocusout="hideBtnEdit(this.id, event)" /> <label for="inputEmail ' + email.id + '">E-mail</label> <button class="btn btn-outline-primary btnEdit" id="btnEditEmail' + email.id + '" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button> </div> </div> <div class="divInputPrincipal py-3"> <div class="form-check"> <input name="default-radio-1" class="form-check-input" type="radio" id="inputPrincipal' + email.id + '" value="1" checked="" onchange="editPessoa(this.id)"> </div> </div> </div>';
