@@ -225,15 +225,12 @@ function showBtnEdit(inputId) {
 }
 
 function hideBtnEdit(inputId, event) {
-  console.log("log");
   if (!inputId.startsWith("btn"))
   {
-    console.log("1 if");
     btnId = "btnEdit" + inputId.slice(5);
   }
   if (!event.relatedTarget || event.relatedTarget.id != btnId)
   {
-    console.log("2 if");
     document.getElementById(btnId).style.display="none";
   }
 }
