@@ -201,7 +201,7 @@ function searchEmail(id) {
           document.getElementById("divCard").innerHTML+=htmlEmail;
           i++;
         });
-        document.getElementById("divCard").innerHTML+=divAdicionarEmail;
+        document.getElementById("divCard").innerHTML+=divAdicionarEmail.toString();
       })
     }
     else
