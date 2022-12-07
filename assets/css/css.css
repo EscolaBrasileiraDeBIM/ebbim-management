@@ -92,3 +92,7 @@
 .divInputPrincipal {
     width: 10%
 }
+
+.btnAdd {
+    display: block;
+}
