@@ -692,7 +692,7 @@
                 <div class="col-md-6 colCard colCardRight">
                   <div class="card mb-4">
                     <div class="card-body" id="divCard">
-                      <div class="mb-3 row">
+                      <div class="mb-3 row" id="divAdicionarEmail">
                         <div class="divInputEmail">
                           <div class="form-floating">
                             <input
@@ -701,11 +701,9 @@
                               id="inputEmail"
                               placeholder="Thor@gmail.com"
                               aria-describedby="floatingInputHelp"
-                              onfocus="showBtnEdit(this.id)"
-                              onfocusout="hideBtnEdit(this.id, event)"
                             />
                             <label for="inputEmail">E-mail</label>
-                            <button class="btn btn-outline-primary btnEdit" id="btnEditEmail" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button>
+                            <button class="btn btn-outline-primary btnEdit btnAdd" id="btnEditEmail" type="button"><i class="tf-icons bx bx-plus iconEdit"></i></button>
                           </div>
                         </div>
                         <div class="divInputPrincipal py-3">
