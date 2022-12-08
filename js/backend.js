@@ -359,3 +359,33 @@ function editPessoa(objectId) {
     })
   }
 }
+
+function addEmail() {
+  var email = document.getElementById("inputEmail").value.toString();
+  var idaa = document.getElementById("inputId").value.toString();
+  var principal = 0;
+  if (document.getElementById("inputPrincipal").checked)
+  {
+    principal = 1;
+  }
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/Inserir.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'email': email,
+    'idaa': idaa,
+    'principal': principal
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+      response.json().then(function(data) {
+        alert("Adicionado");
+      });
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
