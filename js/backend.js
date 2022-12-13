@@ -362,6 +362,7 @@ function editPessoa(objectId) {
 
 function addEmail() {
   var email = document.getElementById("inputEmail").value.toString();
+  console.log(email);
   var idaa = document.getElementById("inputId").value.toString();
   var principal = 0;
   if (document.getElementById("inputPrincipal").checked)
