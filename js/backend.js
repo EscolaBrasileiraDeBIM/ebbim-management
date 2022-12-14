@@ -405,7 +405,7 @@ function editEmail(objectId) {
     }).then((response) => {
       if (response.ok)
       {
-        alert("Atulizado o campo de " + campo + " para " + valor);
+        alert("Email atualizado para " + valor);
       }
       else
       {
