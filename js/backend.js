@@ -419,7 +419,10 @@ function editEmail(objectId) {
     }).then((response) => {
       if (response.ok)
       {
-        alert("Email atualizado para " + valor);
+        if (objectType == 'button')
+        {
+          alert("Email atualizado para " + valor);
+        }
       }
       else
       {
