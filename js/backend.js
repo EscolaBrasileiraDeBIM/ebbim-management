@@ -429,6 +429,7 @@ function removeEmail(objectId) {
   }).then((response) => {
     if (response.ok)
     {
+      document.getElementById(objectId).parentElement.parentElement.parentElement.remove();
       alert("Removido");
     }
     else
