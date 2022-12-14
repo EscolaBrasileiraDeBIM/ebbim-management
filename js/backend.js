@@ -417,3 +417,23 @@ function editEmail(objectId) {
       }
     })
 }
+
+function removeEmail(objectId) {
+  id = objectId.slice(12);
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/DeletarEmail.php.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'id': id
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+      alert("Removido");
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
