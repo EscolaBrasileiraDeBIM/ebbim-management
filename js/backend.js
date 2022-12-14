@@ -419,8 +419,8 @@ function editEmail(objectId) {
 }
 
 function removeEmail(objectId) {
-  id = objectId.slice(12);
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/DeletarEmail.php.php', {
+  id = objectId.slice(14);
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/DeletarEmail.php', {
   method: "POST",
   body: new URLSearchParams({
     'id': id
