@@ -175,7 +175,7 @@ function searchEmail(id) {
         divAdicionarEmail = document.getElementById("divCard").innerHTML;
         document.getElementById("divAdicionarEmail").remove();
         data.forEach(email => {
-          htmlEmail = '<div class="mb-3 row"> <div class="divInputEmail"> <div class="form-floating"><input type="text" class="form-control" id="inputEmail' + email.id + '" placeholder="Thor@gmail.com" value="' + email.email +'" aria-describedby="floatingInputHelp" onfocus="showBtnEdit(this.id)" onfocusout="hideBtnEdit(this.id, event)" /> <label for="inputEmail ' + email.id + '">E-mail</label> <button class="btn btn-outline-primary btnEdit" id="btnEditEmail' + email.id + '" type="button" onclick="editPessoa(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button> </div> </div> <div class="divInputPrincipal py-3"> <div class="form-check"> <input name="default-radio-1" class="form-check-input" type="radio" id="inputPrincipal' + email.id + '" value="1" checked="" onchange="editPessoa(this.id)"> </div> </div> </div>';
+          htmlEmail = '<div class="mb-3 row"> <div class="divInputEmail"> <div class="form-floating"><input type="text" class="form-control" id="inputEmail' + email.id + '" placeholder="Thor@gmail.com" value="' + email.email +'" aria-describedby="floatingInputHelp" onfocus="showBtnEdit(this.id)" onfocusout="hideBtnEdit(this.id, event)" /> <label for="inputEmail ' + email.id + '">E-mail</label> <button class="btn btn-outline-primary btnEdit" id="btnEditEmail' + email.id + '" type="button" onclick="editEmail(this.id)" onfocusout="hideBtnEdit(this.id, event)"><i class="tf-icons bx bxs-edit iconEdit"></i></button> </div> </div> <div class="divInputPrincipal py-3"> <div class="form-check"> <input name="default-radio-1" class="form-check-input" type="radio" id="inputPrincipal' + email.id + '" value="1" checked="" onchange="editPessoa(this.id)"> </div> </div> </div>';
           /* <div class="mb-3 row">
             <div class="divInputEmail">
               <div class="form-floating">
@@ -388,4 +388,31 @@ function addEmail() {
       alert("Erro");
     }
   })
+}
+
+function editEmail(objectId) {
+  id = objectId.slice(12);
+  inputId = "input" + objectId.slice(7);
+  valor = document.getElementById(inputId).value;
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
+    method: "POST",
+    body: new URLSearchParams({
+      'id': id,
+      'campo': 'nm_email',
+      'novoValor': valor
+    }),
+    headers: {"Content-type": "application/x-www-form-urlencoded"}
+    }).then((response) => {
+      if (response.ok)
+      {
+        if (objectType == 'button')
+        {
+          alert("Atulizado o campo de " + campo + " para " + valor);
+        }
+      }
+      else
+      {
+        alert("Erro");
+      }
+    })
 }
