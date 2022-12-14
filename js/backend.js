@@ -224,17 +224,21 @@ function isTrue(valor) {
 
 function showBtnEdit(inputId) {
   btnId = "btnEdit" + inputId.slice(5);
+  btnId2 = "btnRemove" + inputId.slice(5);
   document.getElementById(btnId).style.display="block";
+  document.getElementById(btnId2).style.display="block";
 }
 
 function hideBtnEdit(inputId, event) {
   if (!inputId.startsWith("btn"))
   {
     btnId = "btnEdit" + inputId.slice(5);
+    btnId2 = "btnRemove" + inputId.slice(5);
   }
-  if (!event.relatedTarget || event.relatedTarget.id != btnId)
+  if (!event.relatedTarget || (event.relatedTarget.id != btnId && event.relatedTarget.id != btnId2))
   {
     document.getElementById(btnId).style.display="none";
+    document.getElementById(btnId2).style.display="none";
   }
 }
 
