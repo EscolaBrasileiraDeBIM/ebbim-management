@@ -405,10 +405,7 @@ function editEmail(objectId) {
     }).then((response) => {
       if (response.ok)
       {
-        if (objectType == 'button')
-        {
-          alert("Atulizado o campo de " + campo + " para " + valor);
-        }
+        alert("Atulizado o campo de " + campo + " para " + valor);
       }
       else
       {
