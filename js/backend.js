@@ -397,9 +397,9 @@ function addEmail() {
 function editEmail(objectId) {
   id = objectId.slice(12);
   objectType = document.getElementById(objectId).type;
-  inputId = "input" + objectId.slice(7);
   if (objectType == 'button')
   {
+    inputId = "input" + objectId.slice(7);
     valor = document.getElementById(inputId).value;
     campo = "nm_email";
   }
