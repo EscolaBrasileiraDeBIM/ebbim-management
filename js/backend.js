@@ -405,7 +405,7 @@ function editEmail(objectId) {
   }
   else
   {
-    valor = document.getElementById(objectId).checked;
+    valor = +document.getElementById(objectId).checked;
     campo = "ic_principal";
   }
   fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
