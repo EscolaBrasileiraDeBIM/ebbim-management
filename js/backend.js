@@ -395,16 +395,17 @@ function addEmail() {
 }
 
 function editEmail(objectId) {
-  id = objectId.slice(12);
   objectType = document.getElementById(objectId).type;
   if (objectType == 'button')
   {
+    id = objectId.slice(12);
     inputId = "input" + objectId.slice(7);
     valor = document.getElementById(inputId).value;
     campo = "nm_email";
   }
   else
   {
+    id = objectId.slice(14);
     valor = +document.getElementById(objectId).checked;
     campo = "ic_principal";
   }
