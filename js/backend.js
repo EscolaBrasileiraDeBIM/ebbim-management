@@ -402,15 +402,7 @@ function editEmail(objectId) {
     inputId = "input" + objectId.slice(7);
     valor = document.getElementById(inputId).value;
     campo = "nm_email";
-  }
-  else
-  {
-    id = objectId.slice(14);
-    valor = +document.getElementById(objectId).checked;
-    campo = "ic_principal";
-  }
-  console.log(valor + "-" + id);
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
+    fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
     method: "POST",
     body: new URLSearchParams({
       'id': id,
@@ -431,6 +423,33 @@ function editEmail(objectId) {
         alert("Erro");
       }
     })
+  }
+  else
+  {
+    idPrincipal = objectId.slice(14);
+    valor = 0;
+    campo = "ic_principal";
+    array = Array.from(document.getElementById("inputPrincipalAB00006").parentElement.parentElement.parentElement.parentElement.children).forEach(el => {
+      id = el.children[1].children[0].children[0].id.slice(14);
+      if (id)
+      {
+        if (id == idPrincipal)
+        {
+          valor = 1;
+        }
+        fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
+        method: "POST",
+        body: new URLSearchParams({
+          'id': id,
+          'campo': campo,
+          'novoValor': valor
+        }),
+        headers: {"Content-type": "application/x-www-form-urlencoded"}
+        })
+        valor = 0;
+      }
+    })
+  }
 }
 
 function removeEmail(objectId) {
