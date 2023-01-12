@@ -103,11 +103,15 @@
     display: none;
 }
 
-.formLeft {
+.formRight {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
 }
 
 .formMini {
     width: 15%;
+}
+
+.formMain {
+    width: 70%;
 }
