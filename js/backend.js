@@ -475,7 +475,7 @@ function removeEmail(objectId) {
 
 function addTelefone() {
   var ddi = document.getElementById("inputDdi").value.toString();
-  var ddd = document.getElementById("inputDDD").value.toString();
+  var ddd = document.getElementById("inputDdd").value.toString();
   var telefone = document.getElementById("inputTelefone").value.toString();
   var idaa = document.getElementById("inputId").value.toString();
   fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Telefone/Inserir.php', {
