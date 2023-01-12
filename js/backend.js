@@ -624,7 +624,7 @@ function editTelefone(objectId) {
 
 function removeTelefone(objectId) {
   id = objectId.slice(17);
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/DeletarTelefone.php', {
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Telefone/DeletarTelefone.php', {
   method: "POST",
   body: new URLSearchParams({
     'id': id
