@@ -508,7 +508,7 @@ function searchTelefone(id) {
     {
       response.json().then(function(data) {
         i = 0;
-        divAdicionarTelefone = document.getElementById("divCard")[1].innerHTML;
+        divAdicionarTelefone = document.getElementById("divCard2").innerHTML;
         document.getElementById("divAdicionarTelefone").remove();
         data.forEach(telefone => {
           htmlTelefone = '<div class="mb-3 row" id="divAdicionarTelefone"> <div class="input-group"> <div class="form-floating formMini"> <input type="text" class="form-control" id="inputDdi' + telefone.id +  '" value="' + telefone.ddi + '" placeholder="55" aria-describedby="floatingInputHelp" /> <label for="inputDdi">DDI</label> </div> <div class="form-floating formMini"> <input type="text" class="form-control formCenter" id="inputDdd' + telefone.id +  '" value="' + telefone.ddd + '" placeholder="11" aria-describedby="floatingInputHelp" /> <label for="inputDdd">DDD</label> </div> <div class="form-floating formMain"> <input type="text" class="form-control formRight" id="inputTelefone' + telefone.id +  '" value="' + telefone.numero + '" aria-describedby="floatingInputHelp" /> <label for="inputTelefone">Telefone</label> <button class="btn btn-outline-primary btnEdit btnAdd" id="btnAddTelefone" type="button" onclick="addTelefone()"><i class="tf-icons bx bx-plus iconEdit"></i></button> </div> </div> </div>';
@@ -547,10 +547,10 @@ function searchTelefone(id) {
                 </div>
               </div>
             </div> */
-          document.getElementById("divCard").innerHTML+=htmlEmail;
+          document.getElementById("divCard2").innerHTML+=htmlEmail;
           i++;
         });
-        document.getElementById("divCard").innerHTML+=divAdicionarTelefone;
+        document.getElementById("divCard2").innerHTML+=divAdicionarTelefone;
       })
     }
     else
