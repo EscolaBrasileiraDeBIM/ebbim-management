@@ -89,10 +89,6 @@
     width: 90%;
 }
 
-.divInputTelefone {
-    width: 90%;
-}
-
 .divInputPrincipal {
     width: 10%
 }
@@ -110,4 +106,8 @@
 .formLeft {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
+}
+
+.formMini {
+    width: 15%;
 }
