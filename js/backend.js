@@ -158,6 +158,7 @@ function searchPessoa() {
         alert("Encontrado");
       });
       searchEmail(id);
+      searchTelefone(id);
     }
     else
     {
@@ -493,6 +494,64 @@ function addTelefone() {
       response.json().then(function(data) {
         alert("Adicionado");
       });
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
+
+function searchTelefone(id) {
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Telefone/GetTelefoneAA.php?idaa=' + id).then((response) => {
+    if (response.ok)
+    {
+      response.json().then(function(data) {
+        i = 0;
+        divAdicionarTelefone = document.getElementById("divCard")[1].innerHTML;
+        document.getElementById("divAdicionarTelefone").remove();
+        data.forEach(telefone => {
+          htmlTelefone = '<div class="mb-3 row" id="divAdicionarTelefone"> <div class="input-group"> <div class="form-floating formMini"> <input type="text" class="form-control" id="inputDdi' + telefone.id +  '" value="' + telefone.ddi + '" placeholder="55" aria-describedby="floatingInputHelp" /> <label for="inputDdi">DDI</label> </div> <div class="form-floating formMini"> <input type="text" class="form-control formCenter" id="inputDdd' + telefone.id +  '" value="' + telefone.ddd + '" placeholder="11" aria-describedby="floatingInputHelp" /> <label for="inputDdd">DDD</label> </div> <div class="form-floating formMain"> <input type="text" class="form-control formRight" id="inputTelefone' + telefone.id +  '" value="' + telefone.numero + '" aria-describedby="floatingInputHelp" /> <label for="inputTelefone">Telefone</label> <button class="btn btn-outline-primary btnEdit btnAdd" id="btnAddTelefone" type="button" onclick="addTelefone()"><i class="tf-icons bx bx-plus iconEdit"></i></button> </div> </div> </div>';
+          /* <div class="mb-3 row" id="divAdicionarTelefone">
+              <div class="input-group">
+                <div class="form-floating formMini">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputDdi"
+                    placeholder="55"
+                    aria-describedby="floatingInputHelp"
+                  />
+                  <label for="inputDdi">DDI</label>
+                </div>
+                <div class="form-floating formMini">
+                  <input
+                    type="text"
+                    class="form-control formCenter"
+                    id="inputDdd"
+                    placeholder="11"
+                    aria-describedby="floatingInputHelp"
+                  />
+                  <label for="inputDdd">DDD</label>
+                </div>
+                <div class="form-floating formMain">
+                  <input
+                    type="text"
+                    class="form-control formRight"
+                    id="inputTelefone"
+                    placeholder="996827771"
+                    aria-describedby="floatingInputHelp"
+                  />
+                  <label for="inputTelefone">Telefone</label>
+                  <button class="btn btn-outline-primary btnEdit btnAdd" id="btnAddTelefone" type="button" onclick="addTelefone()"><i class="tf-icons bx bx-plus iconEdit"></i></button>
+                </div>
+              </div>
+            </div> */
+          document.getElementById("divCard").innerHTML+=htmlEmail;
+          i++;
+        });
+        document.getElementById("divCard").innerHTML+=divAdicionarTelefone;
+      })
     }
     else
     {
