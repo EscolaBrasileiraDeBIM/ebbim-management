@@ -567,59 +567,28 @@ function searchTelefone(id) {
 
 function editTelefone(objectId) {
   objectType = document.getElementById(objectId).type;
-  if (objectType == 'button')
-  {
-    id = objectId.slice(15);
-    inputId = "input" + objectId.slice(7);
-    valor = document.getElementById(inputId).value;
-    fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
-    method: "POST",
-    body: new URLSearchParams({
-      'id': id,
-      'campo': campo,
-      'novoValor': valor
-    }),
-    headers: {"Content-type": "application/x-www-form-urlencoded"}
-    }).then((response) => {
-      if (response.ok)
-      {
-        if (objectType == 'button')
-        {
-          alert("Email atualizado para " + valor);
-        }
-      }
-      else
-      {
-        alert("Erro");
-      }
-    })
-  }
-  else
-  {
-    idPrincipal = objectId.slice(14);
-    valor = 0;
-    campo = "ic_principal";
-    array = Array.from(document.getElementById("inputPrincipalAB00006").parentElement.parentElement.parentElement.parentElement.children).forEach(el => {
-      id = el.children[1].children[0].children[0].id.slice(14);
-      if (id)
-      {
-        if (id == idPrincipal)
-        {
-          valor = 1;
-        }
-        fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
-        method: "POST",
-        body: new URLSearchParams({
-          'id': id,
-          'campo': campo,
-          'novoValor': valor
-        }),
-        headers: {"Content-type": "application/x-www-form-urlencoded"}
-        })
-        valor = 0;
-      }
-    })
-  }
+  id = objectId.slice(15);
+  inputId = "input" + objectId.slice(7);
+  valor = document.getElementById(inputId).value;
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeEmail.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'id': id,
+    'campo': 'cd_telefone',
+    'novoValor': valor
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+
+      alert("Telefone atualizado para " + valor);
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
 }
 
 function removeTelefone(objectId) {
