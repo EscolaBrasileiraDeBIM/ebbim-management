@@ -472,3 +472,31 @@ function removeEmail(objectId) {
     }
   })
 }
+
+function addEmail() {
+  var ddi = document.getElementById("inputDdi").value.toString();
+  var ddd = document.getElementById("inputDDD").value.toString();
+  var telefone = document.getElementById("inputTelefone").value.toString();
+  var idaa = document.getElementById("inputId").value.toString();
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Telefone/Inserir.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'ddi': ddi,
+    'ddd': ddd,
+    'numero': telefone,
+    'idaa': idaa
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+      response.json().then(function(data) {
+        alert("Adicionado");
+      });
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
