@@ -574,7 +574,7 @@ function editTelefone(objectId) {
   method: "POST",
   body: new URLSearchParams({
     'id': id,
-    'campo': 'cd_telefone',
+    'campo': 'cd_numero',
     'novoValor': valor
   }),
   headers: {"Content-type": "application/x-www-form-urlencoded"}
