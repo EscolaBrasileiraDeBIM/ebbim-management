@@ -570,7 +570,7 @@ function editTelefone(objectId) {
   id = objectId.slice(15);
   inputId = "input" + objectId.slice(7);
   valor = document.getElementById(inputId).value;
-  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Email/ChangeTelefone.php', {
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Telefone/ChangeTelefone.php', {
   method: "POST",
   body: new URLSearchParams({
     'id': id,
