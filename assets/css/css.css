@@ -108,6 +108,6 @@
 }
 
 .formLeft {
-    border-bottom-left-radius: 6px;
-    border-top-left-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
 }
