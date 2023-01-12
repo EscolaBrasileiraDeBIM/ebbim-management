@@ -718,7 +718,15 @@
                     <div class="card-body" id="divCard">
                       <div class="mb-3 row" id="divAdicionarTelefone">
                         <div class="divInputTelefone">
-                          <div class="form-floating">
+                          <div class="form-floating input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="inputTelefone"
+                              placeholder="13996827771"
+                              aria-describedby="floatingInputHelp"
+                            />
+                            <label for="inputTelefone">Telefone</label>
                             <input
                               type="text"
                               class="form-control"
@@ -728,11 +736,6 @@
                             />
                             <label for="inputTelefone">Telefone</label>
                             <button class="btn btn-outline-primary btnEdit btnAdd" id="btnAddTelefone" type="button" onclick="addTelefone(this.id)"><i class="tf-icons bx bx-plus iconEdit"></i></button>
-                          </div>
-                        </div>
-                        <div class="divInputPrincipal py-3">
-                          <div class="form-check">
-                            <input name="default-radio-2" class="form-check-input" type="radio" id="inputPrincipal" value="" id="defaultRadio2" checked="">
                           </div>
                         </div>
                       </div>
