@@ -115,3 +115,8 @@
 .formMain {
     width: 70%;
 }
+
+.formCenter {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
