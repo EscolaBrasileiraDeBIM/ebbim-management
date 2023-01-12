@@ -547,7 +547,7 @@ function searchTelefone(id) {
                 </div>
               </div>
             </div> */
-          document.getElementById("divCard2").innerHTML+=htmlEmail;
+          document.getElementById("divCard2").innerHTML+=htmlTelefone;
           i++;
         });
         document.getElementById("divCard2").innerHTML+=divAdicionarTelefone;
