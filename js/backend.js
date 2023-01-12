@@ -473,7 +473,7 @@ function removeEmail(objectId) {
   })
 }
 
-function addEmail() {
+function addTelefone() {
   var ddi = document.getElementById("inputDdi").value.toString();
   var ddd = document.getElementById("inputDDD").value.toString();
   var telefone = document.getElementById("inputTelefone").value.toString();
