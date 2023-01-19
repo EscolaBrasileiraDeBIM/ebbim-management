@@ -611,3 +611,71 @@ function removeTelefone(objectId) {
     }
   })
 }
+
+function addCurso() {
+  var nome = document.getElementById("inputNome").value.toString();
+  var apelido = document.getElementById("inputApelido").value.toString();
+  var empresa = document.getElementById("inputEmpresa").value.toString();
+  var documento = document.getElementById("inputCpfcnpj").value.toString();
+  var rg = document.getElementById("inputRg").value.toString();
+  var dataNascimento = document.getElementById("inputDataNascimento").value.toString();
+  var fornecedor = document.getElementById("inputFornecedor").value.toString();
+  var comentario = document.getElementById("inputComentario").value.toString();
+  var razaoSocial = document.getElementById("inputRazaoSocial").value.toString();
+  var ie = document.getElementById("inputIe").value.toString();
+  var im = document.getElementById("inputIm").value.toString();
+  var pf = 1;
+  var estrangeiro = 1;
+  if (document.getElementById("inputPJ").checked)
+  {
+    pf = null;
+  }
+  if (document.getElementById("inputEstrangeiro").checked)
+  {
+    estrangeiro = null;
+  }
+  var genero = "";
+  if (document.getElementById("inputMasculino").checked)
+  {
+    genero = "Masculino";
+  }
+  else if (document.getElementById("inputFeminino").checked)
+  {
+    genero = "Feminino";
+  }
+  else if (document.getElementById("inputOutros").checked)
+  {
+    genero = "Outros";
+  }
+  fetch('https://sistema.ebbim.com.br/ebbim-api/Controllers/Pessoa/Inserir.php', {
+  method: "POST",
+  body: new URLSearchParams({
+    'nome': nome,
+    'apelido': apelido,
+    'razaoSocial': razaoSocial,
+    'estrangeiro': estrangeiro,
+    'genero': genero,
+    'pf': pf,
+    'cpfCnpj': documento,
+    'ie': ie,
+    'im': im,
+    'fornecedor': fornecedor,
+    'empresa': empresa,
+    'comentario': comentario,
+    'rg': rg,
+    'dataNascimento': dataNascimento
+  }),
+  headers: {"Content-type": "application/x-www-form-urlencoded"}
+  }).then((response) => {
+    if (response.ok)
+    {
+      response.json().then(function(data) {
+        alert("Adicionado");
+      });
+    }
+    else
+    {
+      alert("Erro");
+    }
+  })
+}
